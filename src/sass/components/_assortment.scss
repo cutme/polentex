@@ -1,0 +1,43 @@
+.c-assortment {
+	@extend %clear;
+
+	&__item {
+		float: left;
+		width: grid(370);
+		margin-bottom: 60px;
+		margin-right: 30px;
+		
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+		
+		&:nth-child(3n + 1) {
+			clear: left;
+		}
+
+		&:nth-child(n+4):nth-child(-n+6) {
+			margin-bottom: 0;
+		}	
+		
+		&:hover {
+			.c-assortment__photo {
+				@extend %red-apla--hover;
+			}
+		}	
+	}
+
+	&__photo {
+		@extend %red-apla;
+		margin-bottom: 25px;
+	}
+
+	&__title {
+		text-align: center;
+		font: {
+			size: em(23.3);
+			weight: $bold;
+		}
+		color: $c-black--brightest;
+	}
+	
+}

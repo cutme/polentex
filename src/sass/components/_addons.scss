@@ -1,0 +1,9 @@
+.c-addons {
+	@extend %abs;
+	right: 10px; top: 10px;
+	
+	ul {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}

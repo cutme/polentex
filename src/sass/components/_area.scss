@@ -1,0 +1,59 @@
+.c-area {
+	padding-left: grid(70);
+	color: $c-gray--darkest;
+	
+	p {
+		margin-bottom: 2.5em;
+	}
+	
+	strong {
+		font-weight: $semibold;
+	}
+	
+	.o-header {
+		color: $c-black;
+	}
+	
+	&__buttons {
+		@extend %clear;
+		margin-bottom: 30px;
+		
+		li {
+			float: left;
+			margin-right: 30px;
+		}
+		
+		&.anim {
+			transform: translateX(-100px);
+			opacity: 0;
+			
+			&--loaded {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+		
+		.o-btn {
+			font-size: em(18);
+		}
+	}
+	
+	&__image {
+		float: right;
+		width: grid(670, $base - 70);
+	}
+	
+	&__description {
+		@extend %anim;
+		float: left;
+		transform: translateY(50px);
+		width: grid(430, $base - 70);
+		padding-top: 90px;
+		opacity: 0;
+		
+		.active & {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+}

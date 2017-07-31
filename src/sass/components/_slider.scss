@@ -1,0 +1,124 @@
+.c-slider {
+	@extend %rel;
+	overflow: hidden;
+	
+
+	&--home {
+		border-bottom: 1px solid #dedee2;
+		.item {
+			height: 519px;
+			background: {
+				size: cover;
+				position: center;
+			}
+		}
+	}
+	
+	&__text {
+		@extend %abs; z-index: 9;
+		width: 100%; height: 100%;
+		
+		article {
+			@extend %abs-y;
+			padding-bottom: 120px;
+			padding-left: grid(200);
+
+			i {
+				@extend %abs;
+				left: 145px;
+				top: 10px;
+				font-size: 28px;
+				
+			}
+			
+			img {
+				width: auto !important;
+			}
+
+			p {
+				margin-bottom: 1em;
+				font-size: em(30);
+				color: white;
+
+				& + p {
+					font-size: em(24);
+				}
+			}
+			
+			.signature {
+				display: inline-block;
+			    vertical-align: top;
+			    margin-left: 30px;
+			}
+		}
+	}
+	
+	&__content {
+		@extend %rel;
+	}
+	
+	&__tabs {
+		@extend %abs;
+		z-index: 10;
+		left: 0; bottom: 0;
+		width: 100%;
+		height: 120px;		
+
+		li {
+			@extend %anim;
+			float: left;
+			width: grid(234, 1170);
+			height: 130px;
+			background-color: white;
+			padding: 15px 30px;
+			line-height: 1.25;
+			cursor: pointer;
+			color: $c-black--brightest;
+			
+			&:hover {
+				transform: translateY(-10px);
+			}
+			
+			.num {
+					margin-bottom: 10px;
+					opacity: .3;
+					font: {
+						family: $serif;
+						size: em(24);
+						style: italic;
+					}
+				}
+			
+			.title {
+				text-transform: uppercase;
+				font-weight: $semibold;
+
+				&--big {
+					font-size: em(18);
+				}
+				
+				&--small {
+					font-size: em(13);
+					color: $c-gray--brighter;
+				}
+			}
+			
+			&.is-active {
+				background-color: $c-red;
+				color: white;
+				
+				.num {
+					opacity: 1;
+				}
+				
+				.title {
+					&--small {
+						color: $c-red--brightest;
+					}
+				}
+			}
+		}
+
+	}
+}
+

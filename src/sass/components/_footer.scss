@@ -1,0 +1,10 @@
+.c-footer {
+	background-color: #2e2e2e;
+	height: 130px;
+	
+	.o-wrap {
+		@extend %flex;
+		justify-content: flex-end;
+	    align-items: center;
+	}
+}

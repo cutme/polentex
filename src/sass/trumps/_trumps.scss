@@ -1,0 +1,44 @@
+[class^="icon-"], [class*=" icon-"] {
+	@extend %icomoon;
+}
+
+.anim {
+	@extend %anim-slow;
+}
+
+.is-fixed {
+	position: fixed;
+}
+
+.is-hidden {
+	//opacity: 0;
+}
+
+.no-scroll {
+	overflow: hidden;
+	position: fixed;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-justify {
+	text-align: justify;
+	text-align-last: center;
+}
+
+/* IE */
+
+@media screen and (max-width:400px) {
+    @-ms-viewport{
+        width:320px;
+    }
+}
+
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+

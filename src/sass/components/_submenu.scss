@@ -1,0 +1,56 @@
+.c-submenu {
+	@extend %abs;
+	@extend %anim;
+	left: 10px;
+	display: none;
+	width: calc(100% - 20px);
+	background-color: white;
+	padding: 30px 60px;
+
+	.c-footer & {
+		box-shadow: rgba(#2e2e2e, .15) 0 -5px 10px;
+		bottom: 120px;
+	}
+	
+	.c-top & {
+		top: 119px;
+		box-shadow: rgba(#2e2e2e, .15) 0 5px 10px;
+	}
+
+	li {
+		float: left;
+		width: 150px;
+		margin-right: 30px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+		
+		a {			
+			&:hover {
+				.photo {
+					@extend %red-apla--hover;
+				}
+			}
+		}
+		
+		img {
+			display: block;
+		}
+
+		p {
+			text-transform: uppercase;
+			line-height: 1.2;
+			font: {
+				size: em(14);
+				weight: $semibold;
+			}
+			color: #0e1c2c;			
+		}
+		
+		.photo {
+			@extend %red-apla;
+			margin-bottom: 8px;
+		}
+	}
+}

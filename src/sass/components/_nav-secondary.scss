@@ -1,0 +1,17 @@
+.c-nav-secondary {
+	margin-right: 5px;
+	
+	li {
+		float: left;
+		padding: 0 15px;
+	}
+
+	a {
+		font-size: em(12);
+		color: $c-gray;
+		
+		&:hover {
+			color: $c-red;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+.o-section {
+
+	&--low {
+		padding: 80px 0;
+	}
+	
+	&--normal {
+		padding: 100px 0;
+	}
+
+	&--high {
+		padding: 130px 0;
+	}
+	
+	&.anim {
+		opacity: 0;
+		transform: translateY(50px);
+		
+		&--loaded {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}

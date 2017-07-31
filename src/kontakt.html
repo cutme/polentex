@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pl">
+@@include('./includes/head.html')
+<body>
+
+	@@include('./includes/top.html', { "kontakt": "is-active" })
+
+
+	<div class="o-container">	
+
+		<div class="c-slider c-slider--home js-interactive">
+
+			<div class="c-slider__tabs">
+				<div class="o-wrap">
+					<ul>
+						<li class="js-tab is-active">
+							<p class="num">01</p>
+							<p class="title title--big">25 lat</p>
+							<p class="title title--small">współpracy</p>
+						</li>
+						
+						<li class="js-tab">
+							<p class="num">02</p>
+							<p class="title title--big">Ikea</p>
+							<p class="title title--small">Combi Junior 12</p>
+						</li>
+						
+						<li class="js-tab">
+							<p class="num">03</p>
+							<p class="title title--big">Sheraton</p>
+							<p class="title title--small">Protect Excellence</p>
+						</li>
+						
+						<li class="js-tab">
+							<p class="num">04</p>
+							<p class="title title--big">Lidl</p>
+							<p class="title title--small">Soft-step</p>
+						</li>
+						
+						<li class="js-tab">
+							<p class="num">05</p>
+							<p class="title title--big">Cinema City</p>
+							<p class="title title--small">Maty ergonomiczne</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		
+			<div class="c-slider__content owl-carousel">
+				
+				<div class="item owl-lazy" data-src="img/slider/slide-1.jpg">
+					<div class="c-slider__text">
+						<div class="o-wrap">
+							<article>
+								<i class="icon-arrow-squares"></i>
+
+								<p>
+									Już od 25 lat tworzymy dla Państwa<br>
+									profesjonalne Strefy Czystego Wejścia.
+								</p>
+	
+								<p>
+									Dziękujemy za zaufanie.
+									
+									<img src="img/assets/signature.png" alt="" width="220" height="90" class="signature">
+								</p>
+							</article>
+						</div>
+					</div>
+				</div>
+				
+				<div class="item owl-lazy" data-src="img/slider/slide-2.jpg"></div>
+				<div class="item owl-lazy" data-src="img/slider/slide-3.jpg"></div>
+				<div class="item owl-lazy" data-src="img/slider/slide-4.jpg"></div>
+				<div class="item owl-lazy" data-src="img/slider/slide-5.jpg"></div>
+				
+			</div>
+		</div>
+
+
+		<div class="o-section o-section--normal bg-gray">
+			<div class="o-wrap">
+			
+				<article class="c-article c-article--indent">
+					<header class="o-header">
+						<h1>
+							<em>Kontakt</em>
+						</h1>
+					</header>
+
+					<p>
+Ut nec bibendum diam. Nullam sed libero luctus, blandit ex ac, faucibus purus. Donec hendrerit nisi eget hendrerit vestibulum. Fusce in dignissim elit. Nam consequat odio tincidunt libero elementum pharetra. In porta bibendum felis, eget molestie erat tincidunt non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum lectus suscipit, congue velit non, porta enim. Integer semper euismod consequat. 
+					</p>
+					
+					<p>
+Sed sed justo sed augue pulvinar gravida. Integer porta consectetur felis eget ornare. Nam suscipit pellentesque tellus, in hendrerit nulla aliquam id. Sed et mi ut enim commodo congue. Fusce ut rhoncus lacus.
+					</p>
+				</article>
+
+			
+				<div class="c-contactbar c-contactbar--indent">
+					<a href="produkt.html" class="o-btn o-btn--fill o-btn--red o-btn--upper">Zapytaj o produkt</a>
+					<span class="or">Lub zadzwoń</span>
+					
+					<div class="phones">
+						<div><a href="tel:+48 (58) 341 86 77">+48 (58) 341 86 77</a>;</div> 
+						<div><a href="tel:+48 696 499 550">+48 696 499 550</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="o-section o-section--normal anim">
+			<div class="o-wrap">
+			
+				<div class="c-contact">
+					<div class="c-contact__col c-contact__col--left">
+						<article>
+							<div class="o-header o-header--border">
+								<h4>Siedziba firmy</h4>
+							</div>
+						
+							<h5>Dane adresowe</h5>
+							
+							<p>Polentex Limited Sp. z o.o. ul. Narwicka 21 B, 80-557 Gdańsk</p>
+							<p><strong>Tel:</strong>  +48 (58) 341 86 77;  +48 (58) 342 17 26</p>
+							<p><strong>Fax:</strong>  +48 (58) 342 17 27</p>
+							<p><strong>Kom:</strong>  +48 696 499 550; +48 696 499 554;  +48 696 499 555</p>
+							<p><strong>E-mail:</strong> <a href="mailto:biuro@polentex.pl">biuro@polentex.pl</a></p>
+							<p><strong>Godziny otwarcia:</strong>  8:00 - 15:00</p>
+						</article>
+					
+						<div class="c-map">
+							<div id="map" class="c-map__map" data-lat="54.384389" data-lng="18.632575"></div>							
+						</div>
+					</div>
+
+
+					<div class="c-contact__col c-contact__col--right">
+						<div class="o-header o-header--border">
+							<h4>Formularz kontaktowy</h4>
+						</div>
+					
+					
+						<h5>Dane kontaktowe</h5>
+						
+						<form action="#" class="o-form">
+							<div class="half">
+								<label>Imię</label>
+								<input type="text">
+							</div>
+							
+							<div class="half">
+								<label>Nazwisko</label>
+								<input type="text">
+							</div>
+
+							<label>Nazwa firmy</label>
+							<input type="text">
+
+							<div class="half">
+								<label>E-mail</label>
+								<input type="text">
+							</div>
+							
+							<div class="half">
+								<label>Telefon kontaktowy</label>
+								<input type="text">
+							</div>
+
+							<label>Adres</label>
+							<input type="text">
+							
+							<label>Treść wiadomości</label>
+							<textarea></textarea>
+							
+							<div class="attachment">
+								<p>Dodaj szczegóły zamówienia</p>
+								
+								<a href="#" class="o-btn o-btn--small o-btn--fill o-btn--gray o-btn--plus">Dodaj załącznik</a>
+							</div>
+							
+							<button type="submit" class="o-btn o-btn--fill o-btn--red">Wyślij</button>
+						</form>
+
+					</div>
+
+				</div>
+					
+			</div>
+		</div>
+
+		
+		@@include('./includes/footer.html')
+
+	</div><!-- /container -->
+
+
+
+
+	@@include('./includes/scripts.html')
+
+</body>
+</html>

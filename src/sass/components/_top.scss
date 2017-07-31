@@ -1,0 +1,16 @@
+.c-top {    
+	position: fixed;
+	z-index: 15;
+	left: 0; top: 0;
+	width: 100%;
+	height: 120px;
+	background-color: white;
+	border-bottom: 1px solid rgba(black, .2);
+	
+	.o-wrap {
+		@extend %flex;
+		justify-content: flex-end;
+	    align-items: center;
+	}
+	
+}

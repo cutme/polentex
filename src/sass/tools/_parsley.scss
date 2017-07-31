@@ -1,0 +1,22 @@
+.parsley-errors-list {
+	&.filled {
+		padding: 2px 0 0 20px;
+		font: {
+			size: em(12);
+			weight: $regular;
+		}
+		color: red;
+		
+		.o-form__row--field & {
+			padding: 10px 0 0 20px;
+			font: {
+				weight: $regular;
+			}
+		}
+		
+		.parsley-type,
+		.parsley-required {
+			margin-bottom: 10px;
+		}
+	}
+}

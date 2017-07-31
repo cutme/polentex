@@ -1,0 +1,20 @@
+.c-bottom {
+	background-color: #212121;
+	height: 62px;
+	font-size: em(12);
+	color: #999;
+	
+	.o-wrap {
+		@extend %flex;
+	    align-items: center;
+		justify-content: space-between;
+	}
+	
+	a {
+		color: white;
+		
+		&:hover {
+			color: $c-red;
+		}
+	}
+}

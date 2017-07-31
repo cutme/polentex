@@ -1,0 +1,110 @@
+.o-form {
+	@extend %flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 10px;
+	
+	input[type=email],
+	input[type=text],
+	textarea {
+		@extend %anim;
+		background-color: white;
+		margin-bottom: 14px;
+		padding: 0 20px;
+		border: 2px solid #e1e8ee;
+		font-size: em(14);
+	}
+
+	label {
+		display: block;
+		margin-bottom: 6px;
+		font-size: em(14);
+		color: $c-gray--darkest;
+	}
+
+	input[type=email],
+	input[type=text] {
+		height: 42px;
+
+		.has-error & {
+			border-color: $c-red !important;
+		}
+
+		&:focus {
+			//background-color: darken($c-white--darker, 1%);
+			border-color: black;
+		}
+	}
+
+	textarea {
+		height: 180px;
+		background-color: white;
+		padding-top: 10px;
+	}
+	
+	.attachment {
+	
+		p {
+			margin-bottom: 10px;
+			font: {
+				size: em(18);
+				weight: $semibold;
+			}
+			color: $c-red;
+		}
+	}
+	
+	.half {
+		width: grid(236, 500);
+	}
+}
+
+/*
+
+input[type=radio],
+input[type=checkbox] {
+	display: none;
+
+	& + label {
+	    display: flex;
+
+		i {
+			float: left;
+			height: 20px;
+			width: 20px;
+			background-color: white;
+			border-radius: 2px;
+			cursor: pointer;
+			vertical-align: middle;
+			font-size: em(12);
+			padding: 4px 0 0 2px;
+			color: black;
+			
+			&:before {
+				opacity: 0;
+			}
+		}
+
+		span {
+			float: left;
+			padding: 2px 0 0 10px;
+			vertical-align: middle;
+			font-size: em(13) !important;
+		}
+	}
+	
+	&:checked {
+		& + label {
+			i {
+				background-color: white;
+				
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+
+*/

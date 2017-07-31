@@ -1,0 +1,27 @@
+.c-article {
+	color: $c-gray--darkest;
+	
+	&--indent {
+		padding: 0 70px;
+	}
+	
+	&--negative {
+		margin-top: -16%;
+		padding-left: 300px;
+		padding-right: 70px;
+	}
+	
+	h3 {
+		margin-bottom: 1em;
+		font: {
+			size: em(21);
+			weight: $bold;
+		}
+		color: $c-black;
+	}
+	
+	p {
+		line-height: 1.6;
+		margin-bottom: 2em;
+	}
+}

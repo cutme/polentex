@@ -1,0 +1,16 @@
+.c-lang {
+	
+	li {
+		float: left;
+		margin-left: 15px;
+		filter: grayscale(100%);
+		
+		&:first-child {
+			margin: 0;
+		}
+		
+		&.is-active {
+			filter: grayscale(0);
+		}
+	}
+}

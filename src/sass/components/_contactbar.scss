@@ -1,0 +1,39 @@
+.c-contactbar {
+	padding-top: 30px;
+	
+	&--indent {
+		padding-left: 70px;
+	}
+	
+	&--negative {
+		padding-left: 300px;
+		padding-bottom: 70px;
+		padding-top: 150px;
+	}
+	
+	.or {
+		padding: 0 40px;
+		font-weight: $semibold;
+		color: $c-gray--darkest;
+	}
+	
+	.phones {
+		display: inline-block;
+		font-size: em(24);
+		font-weight: $semibold;
+		color: $c-red;
+		
+		div {
+			display: inline-block;
+			margin-right: 5px;
+		}
+
+		a {
+			@extend %underline;
+			
+			&:after {
+				background-color: $c-red;
+			}
+		}
+	}
+}

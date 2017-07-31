@@ -1,0 +1,57 @@
+body {
+	@include antialias;
+	line-height: 1.4;
+	text-rendering: optimizeSpeed;
+	font: {
+		family: $text;
+		size: #{$base-font-size}px;
+		weight: $regular;
+	}
+	color: $c-black;
+}
+
+a {
+	@extend %anim;
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	
+	&:hover,
+    &:active,
+    &:focus {
+        //color: inherit;
+        outline: none;
+    }
+    
+    &:after, &:before {
+	    @extend %anim;
+    }
+    
+    i {
+	    @extend %anim;
+    }
+}
+
+br {
+	@media screen and ( max-width: $smartphone + px ) {
+		display: none;
+	}
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: $bold;
+}
+
+sup {
+	font-size: em(10);
+	vertical-align: top;
+}
+
+::selection {
+	background-color: $c-red;
+	color: white;
+}

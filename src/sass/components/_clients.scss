@@ -1,0 +1,39 @@
+.c-clients {
+	.owl-item {
+		
+		> div {
+			@extend %flex;
+			justify-content: space-between;
+		}
+		
+		img {
+			width: auto;
+		}
+	}
+	
+	&__dots {
+		text-align: center;
+	}
+	
+	&__dots {
+		margin-bottom: 50px;
+
+		.owl-dot {
+			display: inline-block;
+			margin: 0 16px;
+			text-align: center;
+			font-size: em(14);
+			cursor: pointer;
+			color: #b2bac1;
+			
+			&:before {
+				@extend %icomoon;
+				content: "\e906";				
+			}
+			
+			&.active {
+				color: $c-red;
+			}
+		}
+	}
+}

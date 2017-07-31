@@ -1,0 +1,24 @@
+.o-header {
+	margin-bottom: 1em;
+	color: $c-black;
+	
+	h1, h2 {
+		font: {
+			family: $serif;
+			size: em(48);
+		}
+	}
+	
+	h4 {
+		font: {
+			size: em(24);
+			weight: $semibold;
+		}
+	}
+	
+	&--border {
+		border-bottom: 1px solid #e1e8ee;
+		padding-bottom: 25px;
+		margin-bottom: 30px;
+	}
+}

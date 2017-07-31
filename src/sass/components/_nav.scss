@@ -1,0 +1,128 @@
+.c-nav {
+	//@extend %abs;
+	//margin-top: 10px;
+
+	> ul > li {
+		@extend %flex;
+		float: left;
+		padding: 0 30px;
+		align-items: center;
+		
+		.c-top & {
+			height: 120px;
+		}
+		
+		.c-footer & {
+			height: 130px;
+		}
+		
+		&:last-child {
+			padding-right: 0;
+		}
+
+		> a {
+			@extend %anim;
+			@extend %rel;
+			font-weight: $semibold;
+			
+			&:after {
+				@extend %anim;
+			}
+
+			&:hover {
+				color: $c-red;		
+			}
+		}
+		
+		&.is-active {
+			a {					
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+		
+		&.submenu {
+			> a {
+				.c-top & {
+					&:after {
+						@extend %icomoon;
+						display: inline-block;
+						margin-left: 8px;
+						font-size: em(12);
+						content: "\e900";
+					}
+				}
+			}
+			
+			&:hover {
+				
+				> a {
+					color: $c-red;
+				}
+
+				.c-submenu {
+					display: block;
+					animation: fadeInFromNone 300ms;
+				}			
+			}
+		}
+
+	}
+	
+	.c-top & {
+		
+		> ul > li {
+			height: 120px;
+		}
+		
+		a {
+			text-transform: uppercase;
+			font-size: em(15);
+
+			&:before {
+				@extend %abs-after;
+				@extend %anim-slow;
+				left: 50%;
+				bottom: -14px;
+				transform: translateX(-50%);
+				width: 60%; height: 1px;
+				background-color: $c-red;
+				opacity: 0;
+			}
+		}
+	}
+	
+	.c-footer & {
+		//@extend %abs-y;
+		//right: 10px;
+		
+		> ul > li {
+			padding: 0 20px;
+			
+			&:last-child {
+				padding-right: 0;
+			}
+			
+			> a {
+				@extend %rel;
+				font-size: em(16);
+				color: white;
+	
+				&:before {
+					@extend %icomoon;
+					margin-right: 8px;
+					font-size: em(12);
+					content: "\e906";
+					color: $c-red;
+				}
+				
+				&:hover {
+					color: $c-red;		
+				}
+			}
+		}
+		
+		
+	}
+}

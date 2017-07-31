@@ -1,0 +1,50 @@
+.c-contact {
+	@extend %clear;
+	color: $c-gray--darkest;
+	
+	article {
+		margin-bottom: 40px;
+		
+		a {
+			text-decoration: underline;
+			color: $c-red--brighter;
+			
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		
+		p {
+			margin-bottom: 1.1em;
+			font-size: em(14);		
+		}
+	}
+
+	h5 {
+		margin-bottom: 1.1em;
+		font: {
+			weight: $semibold;
+			size: em(18);
+		}
+	}	
+	
+	strong {
+		font-weight: $semibold;
+		color: $c-black;
+	}
+
+	&__col {
+		
+		&--left {
+			width: 600px;
+			float: left;
+		}
+		
+		&--right {
+			width: 500px;
+			float: right;
+		}
+	}
+	
+	
+}
