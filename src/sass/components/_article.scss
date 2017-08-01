@@ -1,4 +1,5 @@
 .c-article {
+	@extend %rel;
 	color: $c-gray--darkest;
 	
 	&--indent {
