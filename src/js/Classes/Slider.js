@@ -27,7 +27,7 @@
 				tab = this.querySelectorAll('.js-tab'),
 				owl = $(carousel).owlCarousel({
 					animateOut: 'fadeOut',
-					autoplay: false,
+					autoplay: true,
 					items: 1,
 					lazyLoad: false,
 					loop: true
