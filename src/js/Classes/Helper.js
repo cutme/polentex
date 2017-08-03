@@ -49,16 +49,27 @@
 	
 	function goToTarget(target, offset) {
 		var $viewport = $('body, html'), 
-			o = $(target).offset().top;
+			o = $(target).offset().top,
+			page_offset = $(document).scrollTop(),
+			offset_diff = Math.abs(o - page_offset),
+			base_speed  = 500,
+			speed       = (offset_diff * base_speed) / 1000,
 			
-		//offset = offset || 0;		
+		offset = offset || 0;
+		
+		$(document).scrollTop(page_offset);
+		
 
 		$viewport.animate({
-			scrollTop: o + offset
+			scrollTop: o + offset + 2
 		}, {
 			easing: 'easeOutCubic',
-			duration: 500
+			duration: speed
 		});
+		
+		if ( $('body.nav-full.is-visible').length>0 ) {
+			story.Nav.menuHide();
+		}
 	}
 	
 	function isMobile() {

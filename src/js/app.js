@@ -3,7 +3,20 @@
 	'use strict';
 
 
-	$(document).ready(function() {		
+	$(document).ready(function() {
+
+		if (polentex.Helper.exist('.js-goto')) {
+		
+			$('.js-goto').on('click', function(e) {
+				e.preventDefault();
+				var target = $(this).attr('href');
+
+				polentex.Helper.goToTarget(target);
+			});
+			
+			
+		}
+
 
 		if (polentex.Helper.exist('.anim')) polentex.Helper.showOnScroll();
 		if (polentex.Helper.exist('.b-lazy')) polentex.Helper.blazy();

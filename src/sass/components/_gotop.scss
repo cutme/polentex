@@ -1,0 +1,28 @@
+.c-gotop {
+	position: fixed;
+	bottom: 100px;
+	width: 67px;
+	height: 67px;
+	background-color: #4d4d4d;
+	font-size: em(36);
+	color: $c-red--brighter;
+	
+	@media screen and ( min-width: $base + px ) {
+		left: calc(100% - 100px);
+	}
+	
+	@media screen and ( max-width: 1400px ) {
+		display: none;
+	}
+
+	&:before {
+		display: block;
+		transform: rotate(-90deg);
+	}
+	
+	&:hover {
+		&:before {
+			transform: rotate(-90deg) translateX(5px);
+		}
+	}
+}

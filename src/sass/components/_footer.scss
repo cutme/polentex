@@ -2,7 +2,7 @@
 	background-color: #2e2e2e;
 	height: 130px;
 	
-	.o-wrap {
+	> .o-wrap {
 		@extend %flex;
 		justify-content: flex-end;
 	    align-items: center;

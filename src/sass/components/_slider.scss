@@ -71,9 +71,14 @@
 			height: 130px;
 			background-color: white;
 			padding: 15px 30px;
+			border-right: 1px solid rgba(black, .2);
 			line-height: 1.25;
 			cursor: pointer;
 			color: $c-black--brightest;
+			
+			&:last-child {
+				border: none;
+			}
 			
 			&:hover {
 				transform: translateY(-10px);
