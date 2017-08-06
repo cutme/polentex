@@ -2,13 +2,9 @@
 <html lang="pl">
 @@include('./includes/head.html')
 <body>
-	<div id="start"></div>
-
-
-	@@include('./includes/top.html', { "home": "is-active" })
-
-
-	<div class="o-container">	
+	<div class="o-container" id="container"> 
+	
+		@@include('./includes/top.html', { "home": "is-active" })
 
 		@@include('./includes/homeslider.html')
 	
@@ -114,7 +110,7 @@
 		<div class="o-section o-section--normal bg-white">
 			<div class="o-wrap">
 			
-				<div class="c-area js-interactive">
+				<div class="c-area js-interactive" id="areas">
 					<article>
 						<header class="o-header">
 							<h2>Strefy czystego wejścia</h2>
@@ -126,7 +122,7 @@ jego prestiż. Oprócz zespolenia z architekturą wejście pełni ważną funkcj
 wnoszony do wnętrza brud i wilgoć. Takie rozwiązania określiliśmy mianem <strong>„Strefy Czystego Wejścia”</strong>
 						</p>
 					</article>
-					
+
 					<ul class="c-area__buttons anim">
 						<li class="js-tab is-active">
 							<a href="#" class="o-btn o-btn--outline o-btn--red">Strefy</a>
@@ -158,7 +154,7 @@ Donec elementum, urna a molestie fermentum, nisi ante rhoncus nisi, sed pulvinar
 							</article>
 
 							<div class="c-area__image">
-								<img src="img/areas/area-1.png" alt="" width="670" height="450">
+								<img src="img/areas/area-main.png" alt="" width="670" height="450">
 							</div>
 						</div>
 						
@@ -174,7 +170,7 @@ Donec elementum, urna a molestie fermentum, nisi ante rhoncus nisi, sed pulvinar
 							</article>
 
 							<div class="c-area__image">
-								<img src="img/areas/area-2.png" alt="" width="670" height="450">
+								<img src="img/areas/area-1.png" alt="" width="670" height="450">
 							</div>
 						</div>
 						
@@ -190,7 +186,7 @@ Donec elementum, urna a molestie fermentum, nisi ante rhoncus nisi, sed pulvinar
 							</article>
 
 							<div class="c-area__image">
-								<img src="img/areas/area-1.png" alt="" width="670" height="450">
+								<img src="img/areas/area-2.png" alt="" width="670" height="450">
 							</div>
 						</div>
 						
@@ -206,7 +202,7 @@ Donec elementum, urna a molestie fermentum, nisi ante rhoncus nisi, sed pulvinar
 							</article>
 
 							<div class="c-area__image">
-								<img src="img/areas/area-2.png" alt="" width="670" height="450">
+								<img src="img/areas/area-3.png" alt="" width="670" height="450">
 							</div>
 						</div>
 						
@@ -217,7 +213,7 @@ Donec elementum, urna a molestie fermentum, nisi ante rhoncus nisi, sed pulvinar
 		</div><!-- /section -->
 
 
-		<div class="o-section o-section--normal">
+		<div class="o-section o-section--normal bg-white">
 			<div class="o-wrap">
 			
 				<div class="c-popular">
@@ -382,7 +378,7 @@ Maecenas egestas purus sit amet maximus suscipit. Morbi ultricies lectus non ero
 		</div>
 
 
-		<div class="o-section o-section--normal">
+		<div class="o-section o-section--normal bg-white" id="clients">
 			<div class="o-wrap">
 			
 				<div class="o-header text-center">
@@ -422,7 +418,7 @@ Maecenas egestas purus sit amet maximus suscipit. Morbi ultricies lectus non ero
 		</div>
 
 
-		<div class="o-section o-section--normal anim">
+		<div class="o-section o-section--normal bg-white anim">
 			<div class="o-wrap">
 			
 				<div class="c-contact">
@@ -509,7 +505,16 @@ Maecenas egestas purus sit amet maximus suscipit. Morbi ultricies lectus non ero
 
 
 
-
+	<div class="c-search" id="search">
+		<div class="o-wrap">
+			<a href="#" class="icon-close c-search__close js-closeSearch"></a>
+			
+			<div class="c-search__form" id="searchForm">
+				<input type="text" placeholder="Szukaj" id="s" autocomplete="off">	
+				<button type="submit" value="" class="icon-arrow-right"></button>
+			</div>
+		</div>
+	</div>
 	@@include('./includes/scripts.html')
 
 </body>

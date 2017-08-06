@@ -1,4 +1,8 @@
 .o-container {
-//	@extend %clear;
+	@extend %anim;
 	padding-top: 120px;
+	
+	&.is-dimmed {
+		opacity: .2;
+	}
 }

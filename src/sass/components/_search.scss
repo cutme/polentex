@@ -1,0 +1,77 @@
+.c-search {
+	position: fixed; z-index: 20;
+	left: 10px; top: 0;
+	width: calc(100% - 20px); height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	
+	&.is-visible {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&__close {
+		@extend %abs;
+		right: 8px; top: 56px;
+		display: block;
+		width: 19px; height: 19px;
+		font-size: em(20);
+		color: white;
+	}
+	
+	&__form {
+		@extend %abs;
+		@extend %anim-slow;
+		transform: translateY(100%);
+		opacity: 0;
+		top: 518px;
+		width: 100%;
+		height: 120px;
+		
+		.is-visible & {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	
+	input[type=text] {
+		@extend %rel;
+		height: 120px;
+		background-color: white;
+		padding: 0 220px 0 30px;
+		font: {
+			size: em(32);
+			weight: $light;
+		}
+	}
+	
+	button[type=submit] {
+		@extend %abs;
+		@extend %anim;
+		right: 0; top: 0; z-index: 10;
+		width: 190px;
+		height: 120px;
+		background-color: #ef3f3e;
+		color: white;
+		cursor: pointer;
+		
+		&:hover {
+			background-color: darken(#ef3f3e, 10%);
+		}
+		
+		&:before {
+			@extend %abs-after;
+			@extend %icomoon;
+			left: 0; top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			font-size: em(40);
+			content: "\e909";
+			color: white;
+		}
+	}
+}
+
+.icon-arrow-right {
+	color: white;
+}

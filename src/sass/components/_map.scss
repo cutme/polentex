@@ -1,5 +1,6 @@
 .c-map {
 	@extend %rel;
+	animation: blink normal 3s infinite;
 	height: 385px;
 
 	&__map {

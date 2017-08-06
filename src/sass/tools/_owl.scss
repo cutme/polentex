@@ -1,0 +1,8 @@
+.owl-carousel {
+	@extend %anim;
+	opacity: 0;
+	
+	&.owl-loaded {
+		opacity: 1;
+	}
+}

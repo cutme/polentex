@@ -3,6 +3,7 @@
 
 	var Helper = function() {
         return {
+        	addClassF: addClassF,
         	exist: exist,
         	blazy: blazy,
         	goToTarget: goToTarget,
@@ -10,9 +11,30 @@
         	isMobile: isMobile,
         	isWindowSmallerThan: isWindowSmallerThan,
         	mapstyle: mapstyle,
-        	showOnScroll: showOnScroll
+        	showOnScroll: showOnScroll,
+        	viewport: viewport
         };
     };
+    
+    function addEvent(element, eventName, fn) {
+	    if (element.addEventListener)
+	        element.addEventListener(eventName, fn, false);
+	    else if (element.attachEvent)
+	        element.attachEvent('on' + eventName, fn);
+	}
+	
+	function addClassF(el,cls)
+  {
+      var clss;
+      if (typeof cls === "string" ) {
+         clss = cls.split(" ");
+      } else if ( cls instanceof Array ) {
+         clss = cls;
+      }
+      var i = 0, len = clss.length;
+      for(; i < len ; i++ )
+         el.classList.add(clss[i]);
+  }
     
     function isInView() {
 		var bottomOfWindow = $(window).scrollTop() + $(window).height();
@@ -53,12 +75,11 @@
 			page_offset = $(document).scrollTop(),
 			offset_diff = Math.abs(o - page_offset),
 			base_speed  = 500,
-			speed       = (offset_diff * base_speed) / 1000,
+			speed       = (offset_diff * base_speed) / 1000;
 			
-		offset = offset || 0;
+		if (offset === undefined) offset = 0;
 		
 		$(document).scrollTop(page_offset);
-		
 
 		$viewport.animate({
 			scrollTop: o + offset + 2
@@ -82,7 +103,7 @@
 	
 	function isWindowSmallerThan(resBorder) {
         return window.innerWidth < parseInt(resBorder, 10);
-    }
+    }	
 
 	function showOnScroll() {
     	var body = window,
@@ -106,6 +127,67 @@
 			});
 		});
     }
+	
+	function viewport(arr) {
+		var bottomOfWindow, arr_exist = [];
+		
+
+		// Check if object exist and move to new array
+		
+		$.each(arr, function( i, val) {
+		
+			if (polentex.Helper.exist('#'+val)) {
+
+				arr_exist.push(val);
+				$('#'+val).data('visible', false);
+
+			}
+		});
+		
+		function checkVp() {
+
+			bottomOfWindow = $(window).scrollTop() + window.innerHeight;
+			//bottomOfWindow = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0 + window.innerHeight;
+
+			// Check if in viewport and start action
+
+			$.each(arr_exist, function( i, val) {
+				
+				if (( $('#'+val).offset().top < bottomOfWindow ) && ($('#'+val).data('visible') === false )) {
+					
+					$('#'+val).data('visible', true);
+
+					// Actions
+					
+					switch(val) {
+
+						case 'areas': 	
+							console.log('play areas');					
+							polentex.Slider.interactive(val);
+							break;
+
+						case 'clients': 
+							polentex.Slider.clients();
+							break;
+
+						case 'homeslider': 
+							console.log('play home');						
+							polentex.Slider.interactive(val);
+							break;
+
+						case 'map': 	
+							console.log('show map');						
+							polentex.googleMap.init();
+							break;
+					}
+				}
+			});
+		}
+
+		addEvent(window, 'load', function() { checkVp(); });
+		addEvent(window, 'scroll', function() { checkVp(); });		
+		
+	}
 	
 	polentex.Helper = new Helper();
 

@@ -1,6 +1,4 @@
 .c-nav {
-	//@extend %abs;
-	//margin-top: 10px;
 
 	> ul > li {
 		@extend %flex;
@@ -71,7 +69,8 @@
 	}
 	
 	.c-top & {
-		
+		padding-top: 10px;
+
 		> ul > li {
 			height: 120px;
 		}

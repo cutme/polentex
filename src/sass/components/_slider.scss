@@ -1,10 +1,11 @@
 .c-slider {
 	@extend %rel;
 	overflow: hidden;
-	
 
 	&--home {
+		height: 519px;
 		border-bottom: 1px solid #dedee2;
+		
 		.item {
 			height: 519px;
 			background: {
