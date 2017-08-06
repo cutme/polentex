@@ -2,10 +2,10 @@
 <html lang="pl">
 @@include('./includes/head.html')
 <body>
+
 	<div class="o-container" id="container"> 
 	
 		@@include('./includes/top.html', { "home": "is-active" })
-
 		@@include('./includes/homeslider.html')
 	
 	
@@ -505,16 +505,7 @@ Maecenas egestas purus sit amet maximus suscipit. Morbi ultricies lectus non ero
 
 
 
-	<div class="c-search" id="search">
-		<div class="o-wrap">
-			<a href="#" class="icon-close c-search__close js-closeSearch"></a>
-			
-			<div class="c-search__form" id="searchForm">
-				<input type="text" placeholder="Szukaj" id="s" autocomplete="off">	
-				<button type="submit" value="" class="icon-arrow-right"></button>
-			</div>
-		</div>
-	</div>
+	@@include('./includes/search.html')
 	@@include('./includes/scripts.html')
 
 </body>
