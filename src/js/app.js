@@ -16,6 +16,7 @@
 		}
 		
 		polentex.Helper.viewport(['areas', 'clients', 'homeslider', 'map']);
+		polentex.Nav.init();
 
 		if (polentex.Helper.exist('.anim')) polentex.Helper.showOnScroll();
 		if (polentex.Helper.exist('.b-lazy')) polentex.Helper.blazy();

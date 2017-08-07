@@ -2,18 +2,16 @@
 	'use strict';
 
 	var Search = polentex.Searchs = function () { },
-		container = document.querySelectorAll('.o-container'),
+		body = document.getElementsByTagName('body'),
+		container = document.getElementById('container'),
 		lens = document.querySelectorAll('.js-search'),
 		listenKeys,
 		searchPage = document.getElementById('search'),
 		searchField = document.getElementById("s"),
 		clickListener,
-		searchForm = document.getElementById('searchForm');
+		searchForm = document.getElementById('searchForm'),
+		top = document.getElementById('top');
 
-	
-	Search.prototype.init = function() {
-		this.init();
-	};
     
     Search.prototype.init = function() {		
 
@@ -23,10 +21,13 @@
 		});	
     };
     
-     Search.prototype.start = function() {	
+    Search.prototype.start = function() {	
+    
+    	var e = $(top).detach();
+			$(container).prepend(e);
 
-     	polentex.Helper.addClassF(document.getElementById("container"),"is-dimmed");
- 	   	polentex.Helper.addClassF(document.getElementById("search"),"is-visible");
+     	polentex.Helper.addClassF(container, 'is-dimmed');
+ 	   	polentex.Helper.addClassF(searchPage, 'is-visible');
      	
 		clickListener = function(event) {
 			var isClickInside = searchForm.contains(event.target);
@@ -54,7 +55,11 @@
 		document.addEventListener('keydown', listenKeys, false);		
      };
 
-	 Search.prototype.destroy = function() {	
+	 Search.prototype.destroy = function() {
+	 
+	 	var e = $(top).detach();
+			$(body).prepend(e);
+
      	$(container).removeClass('is-dimmed');
 
      	document.removeEventListener('keydown', listenKeys);
