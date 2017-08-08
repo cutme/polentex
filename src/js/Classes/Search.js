@@ -4,6 +4,7 @@
 	var Search = polentex.Searchs = function () { },
 		body = document.getElementsByTagName('body'),
 		container = document.getElementById('container'),
+		footer = document.getElementById('footer'),
 		lens = document.querySelectorAll('.js-search'),
 		listenKeys,
 		searchPage = document.getElementById('search'),
@@ -25,6 +26,9 @@
     
     	var e = $(top).detach();
 			$(container).prepend(e);
+			
+		var f = $(footer).detach();
+			$(container).append(f);
 
      	polentex.Helper.addClassF(container, 'is-dimmed');
  	   	polentex.Helper.addClassF(searchPage, 'is-visible');
@@ -59,6 +63,9 @@
 	 
 	 	var e = $(top).detach();
 			$(body).prepend(e);
+			
+		var f = $(footer).detach();
+			$(body).append(f);
 
      	$(container).removeClass('is-dimmed');
 
