@@ -3,9 +3,12 @@
 @@include('./includes/head.html')
 <body>
 
+	@@include('./includes/top.html', { "kontakt": "is-active" })
+
+
 	<div class="o-container" id="container">
 
-		@@include('./includes/top.html', { "kontakt": "is-active" })
+
 		@@include('./includes/homeslider.html')
 
 
@@ -30,13 +33,7 @@ Sed sed justo sed augue pulvinar gravida. Integer porta consectetur felis eget o
 
 			
 				<div class="c-contactbar c-contactbar--indent">
-					<a href="produkt.html" class="o-btn o-btn--fill o-btn--red o-btn--upper">Zapytaj o produkt</a>
-					<span class="or">Lub zadzwoń</span>
-					
-					<div class="phones">
-						<div><a href="tel:+48 (58) 341 86 77">+48 (58) 341 86 77</a>;</div> 
-						<div><a href="tel:+48 696 499 550">+48 696 499 550</a></div>
-					</div>
+					@@include('./includes/contactbar.html')
 				</div>
 			</div>
 		</div>

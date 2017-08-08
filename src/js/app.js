@@ -20,8 +20,10 @@
 
 		if (polentex.Helper.exist('.anim')) polentex.Helper.showOnScroll();
 		if (polentex.Helper.exist('.b-lazy')) polentex.Helper.blazy();
+		if (polentex.Helper.exist('.mfp')) polentex.Magnific.init();
 		if (polentex.Helper.exist('.js-popular')) polentex.Slider.popular();	
 		if (polentex.Helper.exist('.js-search')) polentex.Search.init();
+		if (polentex.Helper.exist('.js-tabs')) polentex.Tabs.init();
 	});
 
 		

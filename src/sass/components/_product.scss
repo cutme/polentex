@@ -1,0 +1,42 @@
+.c-product {
+
+	h2 {
+		margin-bottom: 35px;
+		text-transform: uppercase;
+		font-size: em(16);
+		font-weight: $semibold;
+	}
+	
+	&__info {
+		float: right;
+		width: 870px;
+	}
+
+	&__properities {
+		h4 {
+			text-transform: uppercase;
+		}
+	}
+	
+	.c-article {
+	}
+	
+	.c-contactbar {
+		margin-bottom: 60px;
+	}
+
+	.o-header {
+		float: right;
+		width: 870px;
+	}
+	
+	.o-list {
+		margin-bottom: 40px;
+		
+		.title {
+			font-size: em(14);
+			color: $c-gray--darkest;
+		}		
+	}
+}
+

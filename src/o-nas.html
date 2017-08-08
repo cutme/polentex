@@ -3,9 +3,12 @@
 @@include('./includes/head.html')
 <body>
 
+	@@include('./includes/top.html', { "onas": "is-active" })
+
+
 	<div class="o-container" id="container">	
 
-		@@include('./includes/top.html', { "onas": "is-active" })
+
 		@@include('./includes/homeslider.html')
 
 
@@ -53,13 +56,7 @@ In porta bibendum felis, eget molestie erat tincidunt non. Lorem ipsum dolor sit
 				</article>
 				
 				<div class="c-contactbar c-contactbar--negative">
-					<a href="produkt.html" class="o-btn o-btn--fill o-btn--red o-btn--upper">Zapytaj o produkt</a>
-					<span class="or">Lub zadzwoń</span>
-					
-					<div class="phones">
-						<div><a href="tel:+48 (58) 341 86 77">+48 (58) 341 86 77</a>;</div> 
-						<div><a href="tel:+48 696 499 550">+48 696 499 550</a></div>
-					</div>
+					@@include('./includes/contactbar.html')
 				</div>
 			</div>
 		</div>

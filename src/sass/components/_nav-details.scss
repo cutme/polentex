@@ -1,0 +1,30 @@
+.c-nav-details {
+	@extend %clear;
+	border-bottom: 1px solid #dedee2;
+	margin-bottom: 60px;
+
+	li {
+		float: left;
+		width: 234px;
+		padding: 22px 30px;
+		font-size: em(18);
+		
+		&:first-child {
+			text-align: right;
+		}
+		
+		&.is-active {
+			border-bottom: 3px solid $c-red--brighter;
+			box-shadow: rgba(black, .1) 0 10px 15px;
+			color: $c-red;
+		}
+		
+		&:hover {
+			&:not(:first-child) {
+				cursor: pointer;
+			}
+		}
+	}
+
+	
+}
