@@ -1,0 +1,11 @@
+.o-tabs {
+	&__content {
+		> li {
+			display: none;
+			
+			&.is-active {
+				display: block;
+			}
+		}
+	}
+}
