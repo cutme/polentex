@@ -11,6 +11,7 @@
         	isMobile: isMobile,
         	isWindowSmallerThan: isWindowSmallerThan,
         	mapstyle: mapstyle,
+        	parallax: parallax,
         	showOnScroll: showOnScroll,
         	viewport: viewport
         };
@@ -104,6 +105,39 @@
 	function isWindowSmallerThan(resBorder) {
         return window.innerWidth < parseInt(resBorder, 10);
     }	
+	
+	function parallax() {
+		$.fn.moveIt = function(){
+		  var $window = $(window);
+		  var instances = [];
+		  
+		  
+		  $(this).each(function(){
+		    instances.push(new moveItItem($(this)));
+		  });
+		  
+		  window.onscroll = function(){console.log('f');
+		    var scrollTop = $window.scrollTop();
+		    instances.forEach(function(inst){
+		      inst.update(scrollTop);
+		    });
+		  };
+		};
+		
+		var moveItItem = function(el){
+		  this.el = $(el);
+		  this.speed = parseInt(this.el.attr('data-scroll-speed'));
+		};
+		
+		moveItItem.prototype.update = function(scrollTop){
+		  this.el.css('transform', 'translateY(' + (scrollTop / this.speed) + 'px)');
+		};
+		
+		// Initialization
+		$(function(){
+		  $('[data-scroll-speed]').moveIt();
+		});
+	}
 
 	function showOnScroll() {
     	var body = window,

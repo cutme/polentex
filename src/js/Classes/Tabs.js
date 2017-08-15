@@ -18,7 +18,7 @@
 			
 			var index = $(this).index();
 			
-			if (index != 0) {
+			if (index !== 0) {
 				$(menu_item).removeClass('is-active').eq(index).addClass('is-active');
 				$(content_item).hide().eq(index - 1).fadeIn();
 			}

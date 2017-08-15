@@ -18,6 +18,7 @@
 
 		$(submenu).on('mouseenter', function() {
 			
+			$(body).addClass('is-black');
 			polentex.Helper.addClassF(container, 'is-dimmed');
 			
 			/*
@@ -29,6 +30,7 @@ var e = $(top).detach();
 		
 		$(submenu).on('mouseleave', function() {
 			
+			$(body).removeClass('is-black');
 			$(container).removeClass('is-dimmed');
 			
 			/*

@@ -48,14 +48,6 @@
 	}
 }
 
-.founder {
-	transform: translateX(-100px);
-	
-	&.anim--loaded {
-		transform: translateX(0);
-	}
-}
-
 .is-fixed {
 	position: fixed;
 }
