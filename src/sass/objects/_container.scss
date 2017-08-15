@@ -1,8 +1,16 @@
 .o-container {
-	@extend %anim;
+	@extend %anim-slow;
+	transform: translateY(100px);
+	opacity: 0;
 	padding-top: 120px;
-	
-	&.is-dimmed {
-		opacity: .2;
+
+	.pace-done & {
+		@extend %anim-veryslow;
+		transform: translateY(0);
+		opacity: 1;
+		
+		&.is-dimmed {
+			opacity: .2;
+		}
 	}
 }

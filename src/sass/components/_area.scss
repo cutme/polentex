@@ -44,7 +44,7 @@
 	}
 	
 	&__description {
-		@extend %anim;
+		@extend %anim-slow;
 		float: left;
 		transform: translateY(50px);
 		width: grid(430, $base - 70);

@@ -30,6 +30,7 @@
 		var f = $(footer).detach();
 			$(container).append(f);
 
+		$(body).addClass('is-black');
      	polentex.Helper.addClassF(container, 'is-dimmed');
  	   	polentex.Helper.addClassF(searchPage, 'is-visible');
      	
@@ -67,6 +68,7 @@
 		var f = $(footer).detach();
 			$(body).append(f);
 
+		$(body).removeClass('is-black');
      	$(container).removeClass('is-dimmed');
 
      	document.removeEventListener('keydown', listenKeys);

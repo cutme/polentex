@@ -1,6 +1,8 @@
 .c-slider {
 	@extend %rel;
+	z-index: 1;
 	overflow: hidden;
+	will-change: top, left;
 
 	&--home {
 		height: 519px;
@@ -29,7 +31,7 @@
 				left: 145px;
 				top: 10px;
 				font-size: 28px;
-				
+				color: $c-red;
 			}
 			
 			img {
@@ -56,6 +58,8 @@
 	
 	&__content {
 		@extend %rel;
+		@extend %anim-slow;
+		opacity: 0;
 	}
 	
 	&__tabs {

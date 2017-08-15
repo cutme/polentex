@@ -21,7 +21,13 @@
 }
 
 %anim-slow {
-	transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+	@extend %anim;
+	transition-duration: 1s;
+}
+
+%anim-veryslow {
+	@extend %anim;
+	transition-duration: 2s;
 }
 
 %animfix {

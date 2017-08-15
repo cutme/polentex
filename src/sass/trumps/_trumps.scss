@@ -4,6 +4,48 @@
 
 .anim {
 	@extend %anim-slow;
+	
+	&--fade {
+		transform: translateX(-100px);
+		opacity: 0;
+	
+		&.anim--loaded {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+	
+	&--left {
+		@extend %anim-veryslow;
+		transform: translateX(-100%);
+		opacity: 0;
+		
+		&.anim--loaded {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+	
+	&--right {
+		@extend %anim-veryslow;
+		transform: translateX(100%);
+		opacity: 0;
+		
+		&.anim--loaded {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+	
+	&--up {
+		opacity: 0;
+		transform: translateY(50px);
+		
+		&.anim--loaded {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 }
 
 .founder {

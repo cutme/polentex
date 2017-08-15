@@ -1,4 +1,6 @@
 .o-section {
+	@extend %rel;
+	overflow: hidden;
 
 	&--low {
 		padding: 80px 0;

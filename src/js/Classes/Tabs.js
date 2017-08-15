@@ -18,8 +18,10 @@
 			
 			var index = $(this).index();
 			
-			$(menu_item).removeClass('is-active').eq(index).addClass('is-active');
-			$(content_item).hide().eq(index - 1).fadeIn();
+			if (index != 0) {
+				$(menu_item).removeClass('is-active').eq(index).addClass('is-active');
+				$(content_item).hide().eq(index - 1).fadeIn();
+			}
 		});
     };
     

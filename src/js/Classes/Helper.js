@@ -159,32 +159,36 @@
 
 					// Actions
 					
-					switch(val) {
+					setTimeout(function() {
+						switch(val) {
 
-						case 'areas': 	
-							console.log('play areas');					
-							polentex.Slider.interactive(val);
-							break;
-
-						case 'clients': 
-							polentex.Slider.clients();
-							break;
-
-						case 'homeslider': 
-							console.log('play home');						
-							polentex.Slider.interactive(val);
-							break;
-
-						case 'map': 	
-							console.log('show map');						
-							polentex.googleMap.init();
-							break;
-					}
+							case 'areas': 	
+								console.log('play areas');					
+								polentex.Slider.interactive(val);
+								break;
+	
+							case 'clients': 
+								polentex.Slider.clients();
+								break;
+	
+							case 'homeslider': 
+								console.log('play home');						
+								polentex.Slider.interactive(val);
+								break;
+	
+							case 'map': 	
+								console.log('show map');						
+								polentex.googleMap.init();
+								break;
+						}
+					}, 100);
+					
 				}
 			});
 		}
-
-		addEvent(window, 'load', function() { checkVp(); });
+		
+		checkVp();
+//		addEvent(window, 'load', function() { alert('s'); });
 		addEvent(window, 'scroll', function() { checkVp(); });		
 		
 	}
