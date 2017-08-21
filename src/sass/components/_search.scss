@@ -12,11 +12,13 @@
 
 	&__close {
 		@extend %abs;
-		right: 8px; top: 56px;
+		right: 10px; top: 56px;
 		display: block;
 		width: 19px; height: 19px;
 		font-size: em(20);
 		color: white;
+		
+		
 	}
 	
 	&__form {
@@ -24,13 +26,24 @@
 		@extend %anim-slow;
 		transform: translateY(100%);
 		opacity: 0;
-		top: 518px;
-		width: 100%;
+		width: calc(100% - 20px);
 		height: 120px;
+		
+		@media screen and ( min-width: $tablet + 1px ) {
+			top: 518px;
+		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			top: 50%;
+			transform: translateY(-50%);
+		}
 		
 		.is-visible & {
 			opacity: 1;
-			transform: translateY(0);
+			
+			@media screen and ( min-width: $tablet + 1px ) {
+				transform: translateY(0);
+			}
 		}
 	}
 	
@@ -43,20 +56,34 @@
 			size: em(32);
 			weight: $light;
 		}
+		
+		@media screen and ( max-width: $smartphone + 1px ) {
+			height: 80px;
+			padding: 0 120px 0 20px;
+			font-size: em(18);
+		}
+		
 	}
 	
 	button[type=submit] {
-		@extend %abs;
 		@extend %anim;
+		@extend %abs;
 		right: 0; top: 0; z-index: 10;
 		width: 190px;
 		height: 120px;
 		background-color: #ef3f3e;
 		color: white;
 		cursor: pointer;
+
+		@media screen and ( max-width: $smartphone + px ) {
+			width: 40px;
+			height: 80px;
+		}
 		
 		&:hover {
-			background-color: darken(#ef3f3e, 10%);
+			.desktop & {
+				background-color: darken(#ef3f3e, 10%);
+			}
 		}
 		
 		&:before {

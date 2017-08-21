@@ -1,13 +1,22 @@
 .c-bottom {
 	background-color: #212121;
-	height: 62px;
 	font-size: em(12);
 	color: #999;
 	
+	@media screen and ( min-width: $tablet_portrait + 1px ) {
+		height: 62px;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		padding: 20px 10px;
+	}
+	
 	.o-wrap {
-		@extend %flex;
-	    align-items: center;
-		justify-content: space-between;
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			display: flex;
+		    align-items: center;
+			justify-content: space-between;
+		}
 	}
 	
 	a {
@@ -16,5 +25,13 @@
 		&:hover {
 			color: $c-red;
 		}
+	}
+	
+	&__copyrights {
+		margin-bottom: 10px;
+	}
+	
+	&__realization {
+		margin-bottom: 10px;
 	}
 }

@@ -1,22 +1,40 @@
 .c-contactbar {
 	padding-top: 30px;
 	
+	@media screen and ( max-width: $base + px ) {
+		text-align: center;
+	}
+	
 	&--indent {
-		padding-left: 70px;
+		@media screen and ( min-width: $tablet_portrait + px ) {
+			padding-left: 70px;
+		}
 	}
 	
 	&--negative {
-		padding-left: 300px;
-		padding-bottom: 70px;
-		padding-top: 150px;
+		@media screen and ( min-width: $smartphone + 1px ) {
+			padding-left: grid(300);
+			padding-bottom: 70px;
+			padding-top: 150px;
+		}
+		
+		@media screen and ( max-width: $base + px ) {
+			padding-top: get-vw-base(150);
+		}
+		
 	}
 	
 	.or {
 		padding: 0 40px;
 		font-weight: $semibold;
 		color: $c-gray--darkest;
+		
+		@media screen and ( max-width: $base + px ) {
+			display: block;
+			padding: 25px 0;
+		}		
 	}
-	
+
 	.phones {
 		display: inline-block;
 		font-size: em(24);

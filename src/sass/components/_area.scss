@@ -1,6 +1,10 @@
 .c-area {
-	padding-left: grid(70);
+	
 	color: $c-gray--darkest;
+	
+	@media screen and ( min-width: $tablet_portrait + 1px ) {
+		padding-left: grid(70);
+	}
 	
 	p {
 		margin-bottom: 2.5em;
@@ -18,9 +22,13 @@
 		@extend %clear;
 		margin-bottom: 100px;
 		
+		@media screen and ( max-width: $smartphone + px ) {
+			margin-bottom: 50px;
+		}
+		
 		li {
 			float: left;
-			margin-right: 30px;
+			margin-right: grid(30);
 		}
 		
 		&.anim {
@@ -34,22 +42,46 @@
 		}
 		
 		.o-btn {
+			//padding: 0 grid(50);
 			font-size: em(18);
+			
+			@media screen and ( max-width: $tablet + px ) {
+				padding: 0 25px;
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				padding: 0 15px;
+				font-size: em(14);
+			}
+			
+			@media screen and ( max-width: $smartphone_portrait + px ) {
+				padding: 0 10px;
+				font-size: em(12);
+			}
 		}
 	}
 	
 	&__image {
-		float: right;
-		width: grid(670, $base - 70);
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			float: right;
+			width: grid(670, $base - 70);
+		}
 	}
 	
 	&__description {
 		@extend %anim-slow;
-		float: left;
-		transform: translateY(50px);
-		width: grid(430, $base - 70);
-		padding-top: 90px;
+		
 		opacity: 0;
+		
+		@media screen and ( min-width: $tablet + 1px ) {
+			padding-top: 90px;
+		}
+		
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			float: left;
+			transform: translateY(50px);
+			width: grid(430, $base - 70);
+		}
 		
 		.active & {
 			transform: translateY(0);

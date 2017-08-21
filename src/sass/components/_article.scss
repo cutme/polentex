@@ -3,14 +3,26 @@
 	color: $c-gray--darkest;
 	
 	&--indent {
-		padding: 0 70px;
+		
+		@media screen and ( min-width: $tablet_portrait + px ) {
+			padding: 0 70px;
+		}
 	}
 	
 	&--negative {
-		margin-top: -16%;
-		padding-left: 300px;
-		padding-right: 70px;
+		
+		@media screen and ( min-width: $smartphone + 1px ) {
+			margin-top: -16%;
+			padding-left: grid(300);
+			padding-right: grid(70);
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			padding-top: 20px;
+		}
 	}
+	
+	
 	
 	&--nomargin {
 		margin-bottom: 0;

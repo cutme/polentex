@@ -4,6 +4,36 @@
     {
       "icon": {
         "paths": [
+          "M0 0v204.8h2048v-204.8h-2048zM0 614.4h2048v-204.8h-2048v204.8zM0 1024h2048v-204.8h-2048v204.8z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "width": 2048,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "hamburger"
+        ]
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 12,
+        "id": 2,
+        "name": "hamburger",
+        "prevSize": 32,
+        "code": 59658
+      },
+      "setIdx": 0,
+      "setId": 1,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
           "M568.889 504.415l-512-504.415-56.889 53.096 466.489 458.904-466.489 458.904 56.889 53.096 512-504.415-7.585-7.585z"
         ],
         "attrs": [
@@ -29,7 +59,7 @@
       },
       "setIdx": 0,
       "setId": 1,
-      "iconIdx": 0
+      "iconIdx": 1
     },
     {
       "icon": {
@@ -58,7 +88,7 @@
       },
       "setIdx": 0,
       "setId": 1,
-      "iconIdx": 1
+      "iconIdx": 2
     },
     {
       "icon": {

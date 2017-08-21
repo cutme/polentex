@@ -1,13 +1,15 @@
 .o-header {
-	margin-bottom: 1em;
+	margin-bottom: 1.2em;
 	color: $c-black;
 	
 	h1, h2 {
+		line-height: 1.2;
 		font: {
 			family: $serif;
 			size: em(48);
 		}
 	}
+
 	
 	h4 {
 		font: {

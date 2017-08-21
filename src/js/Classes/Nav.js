@@ -6,6 +6,9 @@
 	
 	Nav.prototype.init = function() {
 		this.menu();
+		this.mobile();
+		
+		if (polentex.Helper.exist('#navProducts')) this.products();
 	};
     
     Nav.prototype.menu = function() {		
@@ -17,27 +20,75 @@
 
 
 		$(submenu).on('mouseenter', function() {
-			
-			$(body).addClass('is-black');
-			polentex.Helper.addClassF(container, 'is-dimmed');
-			
-			/*
-var e = $(top).detach();
-			$(body).prepend(e);
-*/
-			
+			if ( $(window).width() > 1024 ) {
+				$(body).addClass('is-black');
+				polentex.Helper.addClassF(container, 'is-dimmed');
+			}
+		
 		});
 		
 		$(submenu).on('mouseleave', function() {
+			if ( $(window).width() > 1024 ) {
+				$(body).removeClass('is-black');
+				$(container).removeClass('is-dimmed');
+			}
+		});
+    };
+    
+    
+	Nav.prototype.mobile = function() {		
+
+		var menu = document.getElementById('nav'),
+			body = document.getElementsByTagName('body'),
+			hamburger = document.querySelectorAll('.js-hamburger');
+
+
+		$(hamburger).on('click', function(e) {
+			e.preventDefault();
+			$(menu).toggleClass('is-visible');
 			
-			$(body).removeClass('is-black');
-			$(container).removeClass('is-dimmed');
+			$(this).toggleClass('icon-hamburger icon-close');
+		});
+		
+		$('.submenu', menu).on('click', function(e) {
+			//if (polentex.Helper.isWindowSmallerThan(769) === true) {
+				//e.preventDefault();
+				//alert('s');
+			//}
+		});
+    };
+    
+    
+    Nav.prototype.products = function() {		
+
+		var menu = document.getElementById('navProducts'),
+			path;
+
+		$('a', menu).on('click', function(e) {
+			e.preventDefault();
 			
-			/*
-var e = $(top).detach();
-			$(container).prepend(e);
-*/
+			var $$ = $(this);
 			
+			
+			if ( $$.next('ul').length > 0 ) {
+				
+				$$.parents('.parent').addClass('is-active');
+			
+				$$.next('ul').slideToggle(400, function() {
+					
+					path = $$.parents('.parent');
+					
+					if ( $('> ul', path).css('display') === 'none' ) {
+						
+						path.removeClass('is-active');
+
+						$('ul > li ul', path).attr('style', '');
+					}
+				});
+					
+			} else {
+				document.location = $(this).attr('href');
+			}
 		});
     };
     

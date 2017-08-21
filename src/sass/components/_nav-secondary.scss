@@ -4,6 +4,13 @@
 	li {
 		float: left;
 		padding: 0 15px;
+		
+		&.mapsite {
+			@media screen and ( max-width: $smartphone + px ) {
+				display: none;
+			}
+			
+		}
 	}
 
 	a {

@@ -115,3 +115,174 @@
 		transform: scaleX(-1);
 	}
 }
+
+
+
+
+
+/*
+.c-popular {
+	@extend %clear;
+	@extend %rel;
+	
+	.info {
+		padding-top: 30px;
+		text-transform: uppercase;
+		font-weight: $semibold;
+		
+		.category {
+			margin-bottom: 5px;
+			line-height: 1.2;
+			font-size: em(14);
+			color: $c-gray--darkest;
+		}
+		
+		.product {
+			color: black;
+		}
+	}
+	
+
+	.owl-stage {
+		> .active ~ .active {
+		
+				//border-bottom: 3px solid red;
+		
+		}
+	}
+		
+img {
+max-width: 100%;}
+
+	&__item {
+		@extend %rel;
+		width: 190px;
+		margin-right: 10px;
+		padding-top: 360px;
+		
+		@media screen and ( max-width: 1190px ) {
+//				width: get-vw-1190(190);
+			}		
+		
+		img.big {
+			display: none;
+		}
+	}
+
+	.active:first-child, :not(.active) + .active  {
+		.c-popular__item {
+			width: 380px; height: 360px;
+			margin-bottom: 0;
+			margin-right: 0;
+			padding-top: 0;
+			
+			@media screen and ( max-width: 1190px ) {
+//				width: get-vw-1190(380);
+				//height: get-vw-1190(360);
+			}
+			
+		
+			
+			img.big {
+				position: relative;
+				//left: 0; z-index: 30;
+				//top: 0;
+				//height: 360px;
+				//transform: translateY(-50px);
+				
+				//width: 100%;
+				//height: auto;
+				display: block;
+				animation: fadeInFromNone2 400ms ease-out;
+			}
+			
+			img.small {
+				display: none;
+			}
+			
+			.info {
+				position: absolute;
+				left: 0; top: 360px; z-index: 10;
+				//width: 380px; height: 190px;
+				//background: red;
+				animation: fadeInFromNone2 300ms;
+				
+				.category {
+					line-height: 1.4;
+					font-size: em(16);
+				}
+				
+				.product {
+					font-size: em(25);
+				}
+			}
+		}
+	}
+	
+	&__link {
+		.photo {
+			@extend %red-apla;			
+		}
+		
+		&:hover {
+			.photo {
+				@extend %red-apla--hover;
+			}
+		}
+	}
+	
+	&__nav {
+		@extend %flex;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		left: 0; bottom: 0; z-index: 10;
+		width: 200px;
+		height: 80px;
+		
+		.pages {
+			font: {
+				size: em(24);
+				weight: $semibold;
+			}
+			color: #dbe0e4;
+		}
+	}
+	
+	&__text {
+		@extend %abs;
+		left: grid(380);
+		top: 0;
+		width: grid(790);
+		height: 360px;
+		background-color: red;
+		padding: 25px 90px 0 90px;
+
+		p {
+			margin-bottom: 2.5em;
+			color: $c-gray--darkest;
+		}
+	}
+	
+	.owl-next,
+	.owl-prev {
+		@extend %icomoon;
+		@extend %anim;
+		font-size: em(48);
+		cursor: pointer;
+		color: #dbe0e4;
+		
+		&:before {
+			content: "\e902";
+		}
+		
+		&:hover {
+			color: $c-red--brighter;
+		}
+	}
+	
+	.owl-prev {
+		transform: scaleX(-1);
+	}
+}
+*/

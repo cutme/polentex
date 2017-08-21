@@ -1,7 +1,8 @@
 .c-clients {
 	.owl-item {
 		
-		> div {
+	/*
+	> div {
 			@extend %flex;
 			justify-content: space-between;
 		}
@@ -9,6 +10,7 @@
 		img {
 			width: auto;
 		}
+*/
 	}
 	
 	&__dots {
@@ -20,7 +22,7 @@
 
 		.owl-dot {
 			display: inline-block;
-			margin: 0 16px;
+			margin: 0 grid(16);
 			text-align: center;
 			font-size: em(14);
 			cursor: pointer;

@@ -1,9 +1,8 @@
 .o-lens {
 	//@extend %abs;
-	//right: 0; top: 4px;
+	margin-top: 8px;
 	cursor: pointer;
+	color: $c-red;
 	
-	&:hover {
-		color: $c-red;
-	}
+	
 }

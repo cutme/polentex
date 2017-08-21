@@ -5,6 +5,17 @@
 @function grid( $width, $context: $base ) {
     @return percentage( $width / $context );
 }
+
+@function get-vw-1190($target) {
+	$vw-context: (1190 * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-base($target) {
+	$vw-context: (1170 * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
 /*
 
 @function get-vw-1920($target) {

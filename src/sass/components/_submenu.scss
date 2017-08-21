@@ -5,7 +5,7 @@
 	display: none;
 	width: calc(100% - 20px);
 	background-color: white;
-	padding: 30px 60px;
+	padding: 30px grid(60);
 
 	.c-footer & {
 		box-shadow: rgba(#2e2e2e, .15) 0 -5px 10px;
@@ -20,7 +20,8 @@
 	li {
 		float: left;
 		width: 150px;
-		margin-right: 30px;
+		width: grid(150, 1050);
+		margin-right: grid(30, 1050);
 
 		&:last-child {
 			margin-right: 0;

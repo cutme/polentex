@@ -124,6 +124,7 @@
 
 %red-apla {
 	@extend %rel;
+	display: block;
 	overflow: hidden;
 	
 	&:after,
@@ -202,5 +203,13 @@
 		left: 10px;
 		right: 10px;
 	}
+	
+	@media screen and ( max-width: $base + px ) {
+		padding: {
+			left: 20px;
+			right: 20px;
+		}
+	}
+	
 }
 

@@ -1,23 +1,61 @@
 .c-nav-details {
 	@extend %clear;
-	border-bottom: 1px solid #dedee2;
-	margin-bottom: 60px;
+	margin-bottom: 70px;
+	
+	@media screen and ( min-width: $tablet_portrait + 1px ) {
+		border-bottom: 1px solid #dedee2;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		margin: {
+			left: -20px;
+			right: -20px;
+			bottom: 30px;
+		}
+		width: calc(100% + 40px);
+	}
+
+	ul {
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			display: flex;
+		}
+	}
 
 	li {
-		float: left;
-		width: 234px;
-		padding: 22px 30px;
-		font-size: em(18);
+		@extend %anim;
+		padding: 22px grid(30);
 		
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			width: grid(234);
+			font-size: em(18);
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			border-bottom: 1px solid #dedee2;
+		}
+
+		&:not(:last-child) {
+			@media screen and ( min-width: $tablet_portrait + 1px ) {
+				border-right: 1px solid #dedee2;
+			}			
+		}		
+
 		&:first-child {
 			text-align: right;
 			color: $c-gray--brighter;
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				display: none;
+			}
 		}
 		
 		&.is-active {
-			border-bottom: 3px solid $c-red--brighter;
-			box-shadow: rgba(black, .1) 0 10px 15px;
+			box-shadow: 0 3px 0 0 $c-red--brighter, rgba(black, .1) 0 5px 15px;
 			color: $c-red;
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				box-shadow: 0 3px 0 0 $c-red--brighter, rgba(black, .1) 0 12px 15px;
+			}
 		}
 		
 		&:hover {

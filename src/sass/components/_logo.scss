@@ -1,6 +1,38 @@
 .c-logo {
-	@extend %abs-y;
-	left:  10px;
 	display: block;
 	width: 230px; height: 70px;
+	
+	.c-top & {
+		@extend %abs-y;
+		left:  10px;
+		
+		@media screen and ( max-width: $base + px ) {
+			left: 20px;
+		}
+	}
+	
+	.c-footer & {
+		position: relative;
+		
+		@media screen and ( max-width: $base + px ) {
+			left: 20px;
+		}
+		
+		@media screen and ( min-width: $tablet + 1px ) {
+			position: absolute;
+			left:  10px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			margin-bottom: 60px;
+		}
+	}
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		
+		width: 157px;
+		padding-top: 15px;
+	}
 }

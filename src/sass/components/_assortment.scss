@@ -1,23 +1,60 @@
 .c-assortment {
-	@extend %clear;
+	//@extend %clear;
+	@extend %flex;
+	flex-wrap: wrap;
 
-	&__item {
-		float: left;
-		width: grid(370);
+
+	@media screen and ( min-width: $tablet + 1px ) {
+		justify-content: space-between;
+		
+	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+		justify-content: center;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		justify-content: space-between;
+	}
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		justify-content: center;
+	}
+
+	&__item {		
 		margin-bottom: 60px;
-		margin-right: 30px;
 		
-		&:nth-child(3n) {
-			margin-right: 0;
+		@media screen and ( min-width: $tablet + 1px ) {
+			width: grid(370);
 		}
 		
-		&:nth-child(3n + 1) {
-			clear: left;
+		@media screen and ( min-width: $tablet_portrait + px ) and ( max-width: $tablet + px ) {
+			width: grid(370, $tablet);
+			margin: {
+				left: grid(40, $tablet);
+				right: grid(40, $tablet);
+			}
+		}
+		
+		@media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet_portrait + px ) {
+			width: grid(370, $tablet_portrait);
+			
+			
+		}
+		
+		@media screen and ( min-width: $smartphone + 1px )  {
+			&:nth-child(n+4):nth-child(-n+6) {
+				margin-bottom: 0;
+			}
+		}
+		
+		@media screen and ( max-width: $smartphone + px )  {
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 
-		&:nth-child(n+4):nth-child(-n+6) {
-			margin-bottom: 0;
-		}	
+			
 		
 		&:hover {
 			.c-assortment__photo {

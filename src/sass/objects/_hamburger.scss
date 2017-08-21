@@ -1,0 +1,12 @@
+.o-hamburger {
+	@extend %rel;
+	display: none;
+	z-index: 51;
+	margin: 8px 24px 0 0;
+	font-size: em(14);
+	
+	@media screen and ( max-width: $tablet + px ) {
+		display: block;
+	}
+	
+}

@@ -10,9 +10,23 @@
 			owl = $(carousel).owlCarousel({
 				autoplay: true,
 				dotsContainer: '.c-clients__dots',
-				items: 1,
 				lazyLoad: true,
-				loop: true
+				loop: true,
+				responsive: {
+					0: {
+						items: 2
+					},
+					480: {
+						items: 3
+					},
+					768: {
+						items: 4
+					},
+					1170: {
+						items: 5
+					}
+				}
+
 			});		
 	};
 	
@@ -24,7 +38,7 @@
 			tab = obj.querySelectorAll('.js-tab'),
 			owl = $(carousel).owlCarousel({
 				animateOut: 'fadeOut',
-				autoplay: true,
+				autoplay: false,
 				items: 1,
 				lazyLoad: false,
 				loop: true
@@ -71,6 +85,7 @@
 			owl.on('translate.owl.carousel', function(e) {
 				//page.text(e.page.index);
 				current_page.html(e.page.index +1);
+				
 			});
 			
 			

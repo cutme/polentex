@@ -35,16 +35,34 @@
 
 	&__col {
 		
-		&--left {
-			width: 600px;
-			float: left;
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			&--left {
+				width: grid(600);
+				float: left;
+			}
+			
+			&--right {
+				width: grid(500);
+				float: right;
+			}
 		}
 		
-		&--right {
-			width: 500px;
-			float: right;
+		&--left {
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				margin-bottom: 40px;
+			}
+			
+		}		
+	}	
+	
+	.o-btn--red {
+	
+		@media screen and ( max-width: $tablet + px ) {
+			display: block;
+			width: 100%;
+			margin-top: 20px;
 		}
+		
 	}
-	
-	
 }

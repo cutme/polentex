@@ -25,7 +25,15 @@
 		
 		//polentex.Helper.viewport(['areas', 'clients', 'homeslider', 'map']);
 		polentex.Nav.init();
-		polentex.Helper.parallax();
+		polentex.Helper.isMobile();
+		polentex.Helper.relocations();
+		
+		if (polentex.Helper.isWindowSmallerThan(1025) === false) {
+			polentex.Helper.parallax();
+		}
+		
+		
+		
 		
 		if (polentex.Helper.exist('.b-lazy')) polentex.Helper.blazy();
 		if (polentex.Helper.exist('.mfp')) polentex.Magnific.init();

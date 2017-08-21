@@ -8,8 +8,11 @@
 	}
 	
 	&__info {
-		float: right;
-		width: 870px;
+
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			float: right;
+			width: grid($product_info);		
+		}
 	}
 
 	&__properities {
@@ -17,17 +20,16 @@
 			text-transform: uppercase;
 		}
 	}
-	
-	.c-article {
-	}
-	
+
 	.c-contactbar {
 		margin-bottom: 60px;
 	}
 
-	.o-header {
-		float: right;
-		width: 870px;
+	> .o-header {
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			float: right;
+			width: grid(870);
+		}
 	}
 	
 	.o-list {

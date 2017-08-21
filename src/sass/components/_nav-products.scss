@@ -1,11 +1,13 @@
 .c-nav-products {
-	float: left;
-	width: 250px;
-	text-align: right;
+
+	@media screen and ( min-width: $tablet_portrait + 1px ) {
+		float: left;
+		width: grid(250);
+		text-align: right;
+	}
 	
-	a {
-		
-		
+
+	a {		
 		&:hover {
 			color: $c-red;
 		}
@@ -14,8 +16,9 @@
 	> ul {
 
 		> li {
+			border-right: 1px solid transparent;
 			margin-bottom: 15px;
-			padding-right: 35px;
+			padding-right: grid(35, 250);
 
 			> a {
 				text-transform: uppercase;
@@ -25,12 +28,22 @@
 			
 			&.is-active {
 				border-right: 1px solid #e6e8e9;
+				
+				> ul {
+					display: block;
+				}
 			}
 
 
 
+
 			> ul {
+				display: none;
 				padding: 10px 0 20px 0;
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					padding-left: 20px;
+				}
 
 				> li {
 					margin-bottom: 10px;
@@ -46,14 +59,7 @@
 					
 					&.is-active {
 						> a {
-							@extend %rel;
 							
-							&:after {
-								@extend %abs-after;
-								right: -37px; top: 0;
-								width: 3px; height: 100%;
-								background-color: $c-red;
-							}
 						}
 					}
 
@@ -61,6 +67,7 @@
 
 
 					> ul {
+						display: none;
 						padding: 10px 0;
 
 						> li {
@@ -79,7 +86,15 @@
 							}
 							
 							&.is-active {
-								color: $c-red--brighter;
+								@extend %rel;
+								color: $c-red--brighter;								
+							
+								&:after {
+									@extend %abs-after;
+									right: -37px; top: 2px;
+									width: 3px; height: 100%;
+									background-color: $c-red;
+								}
 							}
 						}
 					}

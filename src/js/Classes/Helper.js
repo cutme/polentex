@@ -12,6 +12,7 @@
         	isWindowSmallerThan: isWindowSmallerThan,
         	mapstyle: mapstyle,
         	parallax: parallax,
+        	relocations: relocations,
         	showOnScroll: showOnScroll,
         	viewport: viewport
         };
@@ -107,7 +108,24 @@
     }	
 	
 	function parallax() {
-		$.fn.moveIt = function(){
+		var scroll_amount = $(window).scrollTop();
+	
+		$(window).on('scroll', function () {
+		    setBackgroundPosition();
+		});
+		
+		$(window).on('resize', function() {
+		    setBackgroundPosition();
+		});
+		
+		function setBackgroundPosition(){
+			scroll_amount = $(window).scrollTop();
+		    $(".c-slider__content .item").css('background-position', "center " + (scroll_amount*0.8) + 'px');
+		}
+
+	
+		/*
+$.fn.moveIt = function(){
 		  var $window = $(window);
 		  var instances = [];
 		  
@@ -116,7 +134,7 @@
 		    instances.push(new moveItItem($(this)));
 		  });
 		  
-		  window.onscroll = function(){console.log('f');
+		  window.onscroll = function() {
 		    var scrollTop = $window.scrollTop();
 		    instances.forEach(function(inst){
 		      inst.update(scrollTop);
@@ -137,6 +155,49 @@
 		$(function(){
 		  $('[data-scroll-speed]').moveIt();
 		});
+*/
+	}
+	
+	function relocations() {		
+		
+		var product = false, what, where, e;
+		
+
+		function productsNav() {
+
+			if (polentex.Helper.isWindowSmallerThan(769) === true) {
+				
+				if (product === false) {
+				
+					what = document.getElementById('navProducts');
+					where = document.getElementById('product');
+					
+					e = $(what).detach();
+					$(where).prepend(e);
+
+					product = true;
+				}
+
+			} else {
+				
+				if (product === true) {
+				
+					what = document.getElementById('navProducts');
+					where = document.getElementById('tabs');
+					
+					e = $(what).detach();
+					$(where).prepend(e);
+
+					product = false;
+				}
+			}
+		}
+
+		$(window).on('resize', function() {
+			productsNav();
+		});	
+		
+		productsNav();	
 	}
 
 	function showOnScroll() {

@@ -2,13 +2,48 @@
 	@extend %clear;
 
 	&--float {
+
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+		    justify-content: space-between;
+		}
+
 		li {
-			float: left;
 			margin-bottom: 20px;
+			
+			@media screen and ( min-width: $tablet_portrait + 1px ) {
+				float: left;
+			}
 			
 			&:last-child {
 				margin-right: 0;
 			}
+		}
+	}
+	
+	&--colors {
+		padding-top: 15px;
+
+		img {
+			margin-bottom: 5px;
+		}		
+
+		li {
+			width: 122px;
+			margin-right: 10px;
+
+			@media screen and ( min-width: $tablet_portrait + 1px ) {
+				width: grid(122, $product_info);
+				margin-right: grid(10, $product_info);
+				
+				&:nth-child(7n) {
+					clear: left;
+				}
+			}			
 		}
 	}
 	
@@ -51,32 +86,51 @@
 	}
 	
 	&--gallery {
-		li {
-			margin-right: 10px;
-			
-			&:nth-child(4n+1) {
-				clear: left;
-			}
-		}
-	}
-	
-	&--colors {
-		padding-top: 15px;
-
-		img {
-			margin-bottom: 5px;
-		}
 		
 		li {
-			width: 122px;
+			width: 190px;
 			margin-right: 10px;
+
+			@media screen and ( min-width: $tablet_portrait + 1px ) {
+				width: grid(190, $product_info);
+				margin-right: grid(10, $product_info);
+				
+				&:nth-child(4n+1) {
+					clear: left;
+				}
+			}
 			
-			&:nth-child(7n) {
-				clear: left;
+			@media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet_portrait + px ){
+				width: grid(190, $tablet_portrait - 40);
+				
+				&:nth-child(3n) {
+					margin-right: 0;
+				}
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				width: 48%;
+				margin-right: 0;
+				
+				&:nth-child(odd) {
+					margin-right: 2%;
+				}
+			}		
+		}
+		
+		.photo {
+			@extend %red-apla;
+		}
+
+		a {
+			&:hover {
+				.photo {
+					@extend %red-apla--hover;
+				}
 			}
 		}
 	}
-	
+
 	&--properities {
 		text-transform: uppercase;
 		font-weight: $bold;
@@ -84,14 +138,6 @@
 		li {
 			margin-right: 50px;
 			text-align: center;
-		}
-	}
-	
-	a {
-		&:hover {
-			img {
-				opacity: .9;
-			}
 		}
 	}
 }
