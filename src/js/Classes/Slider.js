@@ -59,9 +59,11 @@
 	
 	Slider.prototype.popular = function() {
 	
-		var nav = $('.js-popularNav'),
-			current_page = $('.js-popularNav .current'),
-			pages= $('.js-popularNav .all'),
+		var nav_counter = '<div class="c-popular__nav js-popularNav"><span class="pages"><span class="current">1</span>/<span class="all"></span></span></div>';
+			
+		//	$('.c-popular').append(nav_counter);
+			
+		var nav, current_page, pages,
 			reinit = false;
 
 
@@ -108,6 +110,11 @@
 				carousel_settings = carousel_settings_mobile;
 			}
 			
+			$('.c-popular').append(nav_counter);
+			
+			nav = $('.js-popularNav');
+			current_page = $('.js-popularNav .current');
+			pages= $('.js-popularNav .all');
 
 		
 			var owl = $(carousel).on('initialized.owl.carousel', function(e) {
