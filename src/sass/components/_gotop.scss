@@ -10,7 +10,7 @@
 	
 	&.is-visible {
 		display: block;
-		animation: fadeInFromNone 400ms ease-out;
+		animation: fadeInFromNone2 400ms ease-out;
 	}
 	
 	@media screen and ( min-width: $base + px ) {

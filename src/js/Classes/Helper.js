@@ -208,11 +208,20 @@ $.fn.moveIt = function(){
     	isInView();
 
     	function goTopArrow() {
-	    	if ( $(body).scrollTop() + $(body).height() > $('#areas').offset().top ) {
+    	
+    		if ( $(body).scrollTop() + $(body).height() > 1600 ) {
 				if ( $(arrow).siblings().not('is-visible') ) $(arrow).addClass('is-visible');
 			} else {
 				if ( $(arrow).siblings('is-visible') ) $(arrow).removeClass('is-visible');
 			}
+    	
+/*
+			if ( $(body).scrollTop() + $(body).height() > $('#areas').offset().top ) {
+				if ( $(arrow).siblings().not('is-visible') ) $(arrow).addClass('is-visible');
+			} else {
+				if ( $(arrow).siblings('is-visible') ) $(arrow).removeClass('is-visible');
+			}
+*/
     	}
 
 		$(body).on('scroll', function() {		
@@ -231,6 +240,7 @@ $.fn.moveIt = function(){
 			});
 
 			goTopArrow();
+			
 		});
     }
 
