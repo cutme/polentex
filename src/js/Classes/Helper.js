@@ -202,9 +202,18 @@ $.fn.moveIt = function(){
 
 	function showOnScroll() {
     	var body = window,
-    		el = document.querySelectorAll('.anim');
+    		el = document.querySelectorAll('.anim'),
+    		arrow = document.querySelectorAll('.js-gotop');
     		
     	isInView();
+
+    	function goTopArrow() {
+	    	if ( $(body).scrollTop() + $(body).height() > $('#areas').offset().top ) {
+				if ( $(arrow).siblings().not('is-visible') ) $(arrow).addClass('is-visible');
+			} else {
+				if ( $(arrow).siblings('is-visible') ) $(arrow).removeClass('is-visible');
+			}
+    	}
 
 		$(body).on('scroll', function() {		
 	        $(el).each( function() {
@@ -220,9 +229,11 @@ $.fn.moveIt = function(){
 					}
 				}
 			});
+
+			goTopArrow();
 		});
     }
-	
+
 	function viewport(arr) {
 		var bottomOfWindow, arr_exist = [];
 		

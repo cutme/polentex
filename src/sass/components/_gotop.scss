@@ -3,9 +3,15 @@
 	bottom: 100px;
 	width: 67px;
 	height: 67px;
-	background-color: #4d4d4d;
+	background-color: white;
 	font-size: em(36);
 	color: $c-red--brighter;
+	display: none;
+	
+	&.is-visible {
+		display: block;
+		animation: fadeInFromNone 400ms ease-out;
+	}
 	
 	@media screen and ( min-width: $base + px ) {
 		left: calc(100% - 100px);
