@@ -12,45 +12,101 @@
 			line-height: 1.2;
 			font-size: em(14);
 			color: $c-gray--darkest;
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				font-size: em(12);
+			}
 		}
 		
 		.product {
 			color: black;
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				font-size: em(14);
+			}
 		}
 	}
 
 	&__item {
 		@extend %rel;
-		float: right;
+		float: left;
 		width: 190px;
-		margin-left: 10px;
+		margin-right: 10px;
+		
+		@media screen and ( min-width: $tablet + 1px ) {
+			float: right;
+			width: grid(190);
+			margin-left: 10px;
+			margin-right: 0;
+		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			margin-bottom: 20px;
+			margin-right: 10px;
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			width: 120px;
+		}
 
 		&--big {
-			float: left;
-			width: 380px;
-			margin-left: 0;
-			margin-bottom: 0;
+			@media screen and ( min-width: $tablet + 1px ) {
+				float: left;
+				width: grid(380);
+				margin-left: 0;
+			}
+			
+			@media screen and ( min-width: $tablet + 1px ) {
+				img.small {
+					display: none;
+				}
+			}
+			
+			@media screen and ( max-width: $tablet + px ) {
+				img.big {
+					display: none;
+				}
+			}
 			
 			.info {
-				position: absolute;
-				left: 0; top: 365px;
-				
-				.category {
-					line-height: 1.4;
-					font-size: em(16);
+				@media screen and ( min-width: $tablet + 1px ) {
+					position: absolute;
+					left: 0; top: 365px;				
+					
+					.category {
+						line-height: 1.4;
+						font-size: em(16);
+					}
+					
+					.product {
+						font-size: em(25);
+					}
 				}
-				
-				.product {
-					font-size: em(25);
+			}
+			
+			.info {
+				@media screen and ( min-width: $tablet + 1px ) and ( max-width: 1190px ) {
+					top: get-vw-1190(365);
 				}
 			}
 			
 		}
 		
 		&:nth-child(2) {
-			clear: left;
+			@media screen and ( min-width: $tablet + 1px ) {
+				clear: left;
+			}
 		}
 	}
+	
+	/*
+.active:first-child, :not(.active) + .active  {
+		.c-popular__item--big {
+			border-bottom: 2px solid red;
+		}
+		
+	}
+*/
 	
 	&__link {
 		.photo {
@@ -68,8 +124,12 @@
 		@extend %flex;
 		justify-content: space-between;
 		align-items: center;
-		position: absolute;
-		left: 0; bottom: 0; z-index: 10;
+		
+		@media screen and ( min-width: $tablet + 1px ) {
+			position: absolute;
+			left: 0; bottom: 0; z-index: 10;
+		}
+		
 		width: 200px;
 		height: 80px;
 		
@@ -83,15 +143,34 @@
 	}
 	
 	&__text {
-		@extend %abs;
-		left: 470px;
-		top: 25px;
-		width: 600px;
+		@media screen and ( min-width: $tablet + 1px ) {
+			position: absolute; z-index: 5;
+			left: grid(380);
+			padding: 25px grid(90);
+			width: grid(790);
+		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			margin-bottom: 40px;
+		}
+		
+		@media screen and ( min-width: $tablet + 1px ) and ( max-width: $base + px ) {
+			padding-top: get-vw-1190(25);
+		}
+		
 
 		p {
 			margin-bottom: 2.5em;
 			color: $c-gray--darkest;
 		}
+	}
+	
+	.o-btn {
+		@media screen and ( max-width: $smartphone + px ) {
+			//display: block;
+			width: 100%;
+		}
+		
 	}
 	
 	.owl-next,
