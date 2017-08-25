@@ -13,6 +13,15 @@
 			float: right;
 			width: grid($product_info);		
 		}
+		
+		h4 {
+			margin-bottom: 1.2em;
+			text-transform: uppercase;
+			font: {
+				size: em(24);
+				weight: $semibold;
+			}
+		}
 	}
 
 	&__properities {

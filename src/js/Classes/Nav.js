@@ -13,13 +13,13 @@
     
     Nav.prototype.menu = function() {		
 
-		var submenu = document.querySelectorAll('.submenu'),
+		var submenu = $('.c-nav .menu-item-has-children'),
 			container = document.getElementById('container'),
 			top = document.getElementById('top'),
 			body = document.getElementsByTagName('body');
 
 
-		$(submenu).on('mouseenter', function() {
+		submenu.on('mouseenter', function() {
 			if ( $(window).width() > 1024 ) {
 				$(body).addClass('is-black');
 				polentex.Helper.addClassF(container, 'is-dimmed');
@@ -27,7 +27,7 @@
 		
 		});
 		
-		$(submenu).on('mouseleave', function() {
+		submenu.on('mouseleave', function() {
 			if ( $(window).width() > 1024 ) {
 				$(body).removeClass('is-black');
 				$(container).removeClass('is-dimmed');
@@ -50,7 +50,7 @@
 			$(this).toggleClass('icon-hamburger icon-close');
 		});
 		
-		$('.submenu', menu).on('click', function(e) {
+		$('.sub-menu', menu).on('click', function(e) {
 			//if (polentex.Helper.isWindowSmallerThan(769) === true) {
 				//e.preventDefault();
 				//alert('s');
@@ -72,11 +72,11 @@
 			
 			if ( $$.next('ul').length > 0 ) {
 				
-				$$.parents('.parent').addClass('is-active');
+				$$.parents('.menu-item:first-child').addClass('is-active');
 			
 				$$.next('ul').slideToggle(400, function() {
 					
-					path = $$.parents('.parent');
+					path = $$.parents('.menu-item:first-child');
 					
 					if ( $('> ul', path).css('display') === 'none' ) {
 						

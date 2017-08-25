@@ -162,6 +162,18 @@ $.fn.moveIt = function(){
 		
 		var product = false, what, where, e;
 		
+		function topSubmenu() {
+			var el = $('.sub-menu.primary-categories'),
+				destTop = $('#nav .menu-item-has-children'),
+				destFotter = $('#footer .menu-item-has-children');
+
+				var f = el.detach();
+				
+				f.clone().appendTo(destTop);
+
+				//destTop.append(f);
+				destFotter.append(f);
+		}
 
 		function productsNav() {
 
@@ -197,7 +209,8 @@ $.fn.moveIt = function(){
 			productsNav();
 		});	
 		
-		productsNav();	
+		productsNav();
+		topSubmenu();	
 	}
 
 	function showOnScroll() {

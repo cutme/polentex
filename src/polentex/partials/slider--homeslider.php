@@ -1,0 +1,68 @@
+
+		<div class="c-slider c-slider--home" id="homeslider">
+
+			<div class="c-slider__tabs">
+				<div class="o-wrap">
+					<ul>
+						<li class="js-tab is-active">
+							<p class="num">01</p>
+							<p class="title title--big">25 lat</p>
+							<p class="title title--small">współpracy</p>
+						</li>
+						
+						<li class="js-tab">
+							<p class="num">02</p>
+							<p class="title title--big">Ikea</p>
+							<p class="title title--small">Combi Junior 12</p>
+						</li>
+						
+						<li class="js-tab">
+							<p class="num">03</p>
+							<p class="title title--big">Sheraton</p>
+							<p class="title title--small">Protect Excellence</p>
+						</li>
+						
+						<li class="js-tab">
+							<p class="num">04</p>
+							<p class="title title--big">Lidl</p>
+							<p class="title title--small">Soft-step</p>
+						</li>
+						
+						<li class="js-tab">
+							<p class="num">05</p>
+							<p class="title title--big">Cinema City</p>
+							<p class="title title--small">Maty ergonomiczne</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		
+			<div class="c-slider__content owl-carousel">
+				
+				<div class="item" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/slider/slide-1.jpg);">
+					<div class="c-slider__text">
+						<div class="o-wrap">
+							<article>
+								<i class="icon-arrow-squares"></i>
+
+								<p>
+									Już od 25 lat tworzymy dla Państwa<br>
+									profesjonalne Strefy Czystego Wejścia.
+								</p>
+	
+								<p>
+									Dziękujemy za zaufanie - Zarząd i pracownicy
+								</p>
+							</article>
+						</div>
+					</div>
+				</div>
+				
+				<div class="item" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/slider/slide-2.jpg);"></div>
+				<div class="item" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/slider/slide-3.jpg);"></div>
+				<div class="item" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/slider/slide-4.jpg);"></div>
+				<div class="item" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/slider/slide-4.jpg);"></div>
+				
+			</div>
+		</div>
+
