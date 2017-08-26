@@ -1,6 +1,6 @@
 	WebFontConfig = {
 		google: {
-			families: ['Open+Sans:300,400,600,700:latin-ext', 'Droid+Serif:400:latin-ext']
+			families: ['Open+Sans:300,400,600,700:latin-ext', 'Noto+Serif:400:latin-ext']
 		},
 		active: function() { 
 

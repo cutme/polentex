@@ -19,6 +19,12 @@
 			body = document.getElementsByTagName('body');
 
 
+		$('a', submenu).on('click', function(e) {
+			if ( $(window).width() > 768 ) {
+				e.preventDefault();
+			}
+		});
+
 		submenu.on('mouseenter', function() {
 			if ( $(window).width() > 1024 ) {
 				$(body).addClass('is-black');
@@ -72,7 +78,7 @@
 			
 			if ( $$.next('ul').length > 0 ) {
 				
-				$$.parents('.menu-item:first-child').addClass('is-active');
+				$$.parents('.menu-item:first-child').addClass('');
 			
 				$$.next('ul').slideToggle(400, function() {
 					
@@ -80,7 +86,7 @@
 					
 					if ( $('> ul', path).css('display') === 'none' ) {
 						
-						path.removeClass('is-active');
+						//path.removeClass('is-active');
 
 						$('ul > li ul', path).attr('style', '');
 					}
