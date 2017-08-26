@@ -34,20 +34,18 @@
 				border-color: $c-red;
 				color: $c-red;
 				
-				.is-active &,
 				&:hover {
 					background-color: $c-red;
 					color: white;
 				}
-			}
+			}			
 			
-			&:nth-child(2) a{
+			&:nth-child(2) a {
 				border-color: $c-orange;
 				color: $c-orange;
 				
-				.is-active &,
 				&:hover {
-					background-color: $c-orange;
+					background-color: $c-orange ;
 					color: white;
 				}
 			}
@@ -56,7 +54,6 @@
 				border-color: $c-violet;
 				color: $c-violet;
 				
-				.is-active &,
 				&:hover {
 					background-color: $c-violet;
 					color: white;
@@ -67,8 +64,29 @@
 				border-color: $c-blue;
 				color: $c-blue;
 				
-				.is-active &,
 				&:hover {
+					background-color: $c-blue;
+					color: white;
+				}
+			}
+			
+			&.is-active {
+				&:first-child a {
+					background-color: $c-red;
+					color: white;
+				}
+				
+				&:nth-child(2) a {
+					background-color: $c-orange ;
+					color: white;
+				}
+				
+				&:nth-child(3) a {
+					background-color: $c-violet;
+					color: white;
+				}
+				
+				&:nth-child(4) a {
 					background-color: $c-blue;
 					color: white;
 				}
