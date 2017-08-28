@@ -5,7 +5,7 @@
 	margin: 8px 24px 0 0;
 	font-size: em(14);
 	
-	@media screen and ( max-width: $tablet + px ) {
+	@media screen and ( max-width: $tablet - 200px ) {
 		display: block;
 	}
 	

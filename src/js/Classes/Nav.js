@@ -20,13 +20,13 @@
 
 
 		$('a', submenu).on('click', function(e) {
-			if ( $(window).width() > 668 ) {
+			if ( $(window).width() > 568 ) {
 				e.preventDefault();
 			}
 		});
 
 		submenu.on('mouseenter', function() {
-			if ( $(window).width() > 1024 ) {
+			if ( $(window).width() > 1024 - 200 ) {
 				$(body).addClass('is-black');
 				polentex.Helper.addClassF(container, 'is-dimmed');
 			}
@@ -34,7 +34,7 @@
 		});
 		
 		submenu.on('mouseleave', function() {
-			if ( $(window).width() > 1024 ) {
+			if ( $(window).width() > 1024 - 200 ) {
 				$(body).removeClass('is-black');
 				$(container).removeClass('is-dimmed');
 			}
