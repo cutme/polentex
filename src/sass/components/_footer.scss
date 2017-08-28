@@ -1,19 +1,19 @@
 .c-footer {
 	background-color: #2e2e2e;
 	
-	@media screen and ( min-width: $tablet + 1px ) {
+	@media screen and ( min-width: $tablet - 199px ) {
 		height: 130px;
 	}
 	
 	> .o-wrap {
 	
-		@media screen and ( min-width: $tablet + px ) {
+		@media screen and ( min-width: $tablet - 199px ) {
 			display: flex;
 			justify-content: flex-end;
 		    align-items: center;		
 		}
 	
-		@media screen and ( max-width: $tablet + px ) {
+		@media screen and ( max-width: $tablet - 200px ) {
 			padding: 30px 0;
 		}
 	}

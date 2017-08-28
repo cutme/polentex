@@ -6,6 +6,7 @@
 	
 	input[type=email],
 	input[type=text],
+	input[type=tel],
 	textarea {
 		@extend %anim;
 		background-color: white;
@@ -23,7 +24,8 @@
 	}
 
 	input[type=email],
-	input[type=text] {
+	input[type=text],
+	input[type=tel] {
 		height: 42px;
 
 		.has-error & {
@@ -32,7 +34,7 @@
 
 		&:focus {
 			//background-color: darken($c-white--darker, 1%);
-			border-color: black;
+			border: 2px solid darken(#e1e8ee, 10%);
 		}
 	}
 
@@ -42,20 +44,30 @@
 		padding-top: 10px;
 	}
 	
+	> p {
+		width: 100%;
+	}
+	
 	.attachment {
 	
-		p {
+		//p {
 			margin-bottom: 10px;
 			font: {
-				size: em(18);
+				//size: em(18);
 				weight: $semibold;
 			}
 			color: $c-red;
-		}
+		//}
 	}
 	
 	.half {
 		width: grid(236, 500);
+		
+		&.mobile {
+			@media screen and ( max-width: $smartphone + px ) {
+				width: 100%;
+			}
+		}
 	}
 }
 

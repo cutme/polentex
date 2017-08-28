@@ -1,0 +1,38 @@
+h2.wsp-pages-title,
+h2.wsp-posts-title {
+	margin-bottom: .5em;
+	font-weight: $bold;
+	
+	line-height: 1.2;
+		font: {
+			size: em(18);
+		}
+}
+
+.wsp-pages-list,
+.wsp-posts-list {
+	padding-left: 25px;
+}
+
+.wsp-category-title {
+	@extend %rel;
+	font-weight: $regular;
+	
+	
+	&:before {
+		@extend %icomoon;
+		@extend %abs;
+		left: -25px; top: 4px;
+		font-size: em(14);
+		content: "\e906";
+		color: $c-red;
+	}
+}
+
+.wsp-container {
+	a {
+		&:hover {
+			color: $c-red;
+		}
+	}
+}

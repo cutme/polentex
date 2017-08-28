@@ -6,6 +6,7 @@
         	addClassF: addClassF,
         	exist: exist,
         	blazy: blazy,
+        	fixEl: fixEl,
         	goToTarget: goToTarget,
         	isInView: isInView,
         	isMobile: isMobile,
@@ -64,6 +65,50 @@
 
     function exist(o) {
 		return ($(o).length > 0) ? true : false;
+	}
+    
+    function fixEl(el) {
+		var pos = $(el).offset(), b = $('body'),
+			product = document.getElementById('product'),
+			tabsNav = document.getElementById('tabsNav'),
+			tabsNavHeight = $(tabsNav).outerHeight(),
+			tabsNavHeightMargins = $(tabsNav).outerHeight(true), status = false;
+		
+		$(window).on('scroll', function() {
+		
+			tabsNavHeight = $(tabsNav).outerHeight();
+			tabsNavHeightMargins = $(tabsNav).outerHeight(true);			
+			
+			if ( b.scrollTop() >= 600 + tabsNavHeightMargins) {
+				
+				if (status === false) {
+					if ( $(window).width() > 768 ) {
+						$(el).addClass('is-fixed');
+						
+						var e = $(el).detach();
+						$('body').append(e);
+					
+						$(product).css('paddingTop', tabsNavHeightMargins);					
+						status = true;
+					}
+				}
+				
+			}  else {
+			
+				if (status === true) {
+					$(el).removeClass('is-fixed');
+					
+					$(product).attr('style', '');
+					e = $(el).detach();
+					$('#product').prepend(e);
+					
+					status = false;
+				}
+			}
+
+
+			
+		});
 	}
     
     function mapstyle() {
@@ -170,8 +215,6 @@ $.fn.moveIt = function(){
 				var f = el.detach();
 				
 				f.clone().appendTo(destTop);
-
-				//destTop.append(f);
 				destFotter.append(f);
 		}
 
@@ -204,6 +247,12 @@ $.fn.moveIt = function(){
 				}
 			}
 		}
+
+		function tabsNav() {
+
+			
+		}
+		
 
 		$(window).on('resize', function() {
 			productsNav();
@@ -292,7 +341,6 @@ $.fn.moveIt = function(){
 						switch(val) {
 
 							case 'areas': 	
-								console.log('play areas');					
 								polentex.Slider.interactive(val);
 								break;
 	
@@ -301,12 +349,10 @@ $.fn.moveIt = function(){
 								break;
 	
 							case 'homeslider': 
-								console.log('play home');						
 								polentex.Slider.interactive(val);
 								break;
 	
 							case 'map': 	
-								console.log('show map');						
 								polentex.googleMap.init();
 								break;
 						}

@@ -1,11 +1,35 @@
 .c-nav-details {
+	@extend %anim;
 	@extend %clear;
+	position: relative; top: 0;
+	background-color: white;
 	margin-bottom: 70px;
 	
+	&.is-dimmed {
+		opacity: .2;
+	}
+	
+	&.is-fixed {
+		
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			position: fixed; 
+			z-index: 10;
+			top: 120px;
+			width: calc(100% - 40px);
+			left: 20px;
+			animation: fadeInFromNone3 1s ease-out;
+		}
+		
+		@media screen and ( min-width: $base + px ) {
+			width: $base + px;
+			left: calc( (100% - 1170px)/2 );
+		}
+	}
+
 	@media screen and ( min-width: $tablet_portrait + 1px ) {
 		border-bottom: 1px solid #dedee2;
 	}
-	
+
 	@media screen and ( max-width: $tablet_portrait + px ) {
 		margin: {
 			left: -20px;
@@ -50,7 +74,7 @@
 		}
 		
 		&.is-active {
-			box-shadow: 0 3px 0 0 $c-red--brighter, rgba(black, .1) 0 5px 15px;
+			box-shadow: 0 3px 0 0 $c-red--brighter, rgba(black, .1) 0 8px 15px;
 			color: $c-red;
 			
 			@media screen and ( max-width: $tablet_portrait + px ) {

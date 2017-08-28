@@ -11,7 +11,8 @@
 		searchField = document.getElementById("s"),
 		clickListener,
 		searchForm = document.getElementById('searchForm'),
-		top = document.getElementById('top');
+		top = document.getElementById('top'),
+		tabsNav = document.getElementById('tabsNav');
 
     
     Search.prototype.init = function() {		
@@ -32,7 +33,13 @@
 
 		$(body).addClass('is-black');
      	polentex.Helper.addClassF(container, 'is-dimmed');
+     	
+     	
+     	if (polentex.Helper.exist('#tabsNav')) {
+	     	polentex.Helper.addClassF(tabsNav, 'is-dimmed');
+     	}
  	   	polentex.Helper.addClassF(searchPage, 'is-visible');
+ 	   	
      	
 		clickListener = function(event) {
 			var isClickInside = searchForm.contains(event.target);
@@ -70,6 +77,9 @@
 
 		$(body).removeClass('is-black');
      	$(container).removeClass('is-dimmed');
+     	if (polentex.Helper.exist('#tabsNav')) {
+	     	polentex.Helper.addClassF(tabsNav, 'is-dimmed');
+     	}
 
      	document.removeEventListener('keydown', listenKeys);
      	searchPage.removeEventListener('click', clickListener);

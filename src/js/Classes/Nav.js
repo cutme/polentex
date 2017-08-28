@@ -20,7 +20,7 @@
 
 
 		$('a', submenu).on('click', function(e) {
-			if ( $(window).width() > 768 ) {
+			if ( $(window).width() > 668 ) {
 				e.preventDefault();
 			}
 		});

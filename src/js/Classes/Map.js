@@ -25,7 +25,7 @@
 						mapStyle = polentex.Helper.mapstyle(),
 						myOptions = {
 							center: new google.maps.LatLng(lat,lng),
-							disableDefaultUI: true,
+							disableDefaultUI: false,
 							draggable: true,
 							mapTypeId: google.maps.MapTypeId.ROADMAP,
 							scrollwheel: false,

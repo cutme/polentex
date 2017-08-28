@@ -9,6 +9,8 @@
 		Pace.on('done', function() {
 			polentex.Helper.viewport(['areas', 'clients', 'homeslider', 'map']);
 			if (polentex.Helper.exist('.anim')) polentex.Helper.showOnScroll();
+			
+			if (polentex.Helper.exist('#tabsNav')) polentex.Helper.fixEl('#tabsNav');
 		});
 
 
@@ -21,6 +23,16 @@
 
 				polentex.Helper.goToTarget(target);
 			});			
+		}
+		
+		
+		
+		if(window.location.hash) {
+			var target = window.location.hash;
+			
+			setTimeout(function() {
+			polentex.Helper.goToTarget(target);
+			}, 1000);
 		}
 		
 		//polentex.Helper.viewport(['areas', 'clients', 'homeslider', 'map']);
@@ -40,6 +52,8 @@
 		if (polentex.Helper.exist('.js-popular')) polentex.Slider.popular();	
 		if (polentex.Helper.exist('.js-search')) polentex.Search.init();
 		if (polentex.Helper.exist('.js-tabs')) polentex.Tabs.init();
+		
+		
 	});
 
 		

@@ -18,14 +18,14 @@
 			left: 20px;
 		}
 		
-		@media screen and ( min-width: $tablet + 1px ) {
+		@media screen and ( min-width: $tablet - 199px ) {
 			position: absolute;
 			left:  10px;
 			top: 50%;
 			transform: translateY(-50%);
 		}
 		
-		@media screen and ( max-width: $tablet + px ) {
+		@media screen and ( max-width: $tablet - 200px ) {
 			margin-bottom: 60px;
 		}
 	}

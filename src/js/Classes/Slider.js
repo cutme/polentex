@@ -20,12 +20,13 @@
 						items: 3
 					},
 					768: {
-						items: 4
+						items: 4,
 					},
 					1170: {
 						items: 5
 					}
-				}
+				},
+				slideBy: 'page'
 
 			});		
 	};
@@ -160,13 +161,11 @@
 					initialize();
 					
 					reinit = true;
-					console.log('1');
 				}
 
 			} else {
 				if (reinit === true) {
 				
-					console.log('2');
 					$(carousel).trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
 					$(carousel).find('.owl-stage-outer').children().unwrap();
 					
