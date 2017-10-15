@@ -1,2 +1,2 @@
 # Polentex
-Live: http://polentex.cutme.pl
+Live: [polentex.cutme.pl](http://polentex.cutme.pl)
