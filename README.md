@@ -1,3 +1,2 @@
 # Polentex
-##### Front end by bartosz (cutme.pl) mediger
-
+Live: http://polentex.cutme.pl
