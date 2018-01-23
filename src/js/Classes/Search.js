@@ -45,7 +45,7 @@
 			var isClickInside = searchForm.contains(event.target);
 			
 			if (isClickInside) {
-				//console.log('You clicked inside');
+
 			}
 			else {
 				Search.prototype.destroy();

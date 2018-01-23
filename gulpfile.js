@@ -140,13 +140,6 @@ gulp.task('sprite', function () {
     return merge(imgStream, cssStream);
 });
 
-gulp.task('w3cjs', function () {
-    gulp.src('src/*.html')
-        .pipe(w3cjs())
-        .pipe(w3cjs.reporter());
-});
-
-
 gulp.task('browser-sync', function() {  
     browserSync.init(["css/*.css", "js/*.js"], {
         server: {
@@ -173,9 +166,7 @@ gulp.task('default', ['sass', 'browser-sync'], function () {
         gulp.start('fileinclude', done);
     }));
     
-    watch("src/includes/**/*.html", batch(function (events, done) {
-        gulp.start('fileinclude', done);
-    }));
+
 });
 
 
